@@ -10,3 +10,11 @@
     clip: rect(0 0 0 0);
     overflow: hidden;
 }
+
+.page-body {
+    min-width: 375px;
+}
+
+.disabled {
+    display: none;
+}

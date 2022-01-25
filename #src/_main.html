@@ -7,6 +7,15 @@
         <button>Добавить заметку</button>
         <a href="" download="#">Скачать анкету</a>
         <button>Распечатать анкету</button>
+
+        <div class="hero__popup popup popup-addnote">
+            <h2 class="popup-addnote__title">Ваша заметка о кандидате</h2>
+            <input type="text" class="popup-addnote__input">
+            <div class="popup-addnote__controls">
+                <button class="basic-button popup-addnote__button popup-addnote__button--cancel">Отмена</button>
+                <button class="basic-button popup-addnote__button popup-addnote__button--save">Сохранить</button>
+            </div>
+        </div>
     </section>
 
     <section class="resume">
@@ -20,9 +29,9 @@
             <div class="resume__candidate-options options">
 
                 <div class="options__wrapper">
-                    <button>Предложить вакансию</button>
+                    <button class="basic-button poptions__button">Предложить вакансию</button>
                     <a href="#" class="options__in-favorites" aria-label="В избранное">В избранное</a>
-                    <a href="#" class="options__call" aria-label="Позвонить">Позвонить</a>
+                    <a href="#" class="options__call disabled" aria-label="Позвонить">Позвонить</a>
                 </div>
                 <div class="options__wrapper ">
                     <h3>Видеособеседование</h3>
