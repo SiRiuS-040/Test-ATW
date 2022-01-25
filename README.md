@@ -2,6 +2,12 @@
 
 Тестовое задание ATW
 
-npm i
+Установка модулей
+    npm i
 
-npm install webp-converter@2.2.3 --save-dev
+Дополнительная команда при ошибке запуска gulp
+    npm install webp-converter@2.2.3 --save-dev
+
+Запуск сборщика 
+    gulp 
+    
