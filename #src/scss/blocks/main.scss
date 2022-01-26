@@ -1,0 +1,396 @@
+.hero {
+    min-height: 48px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    padding-right: 5px;
+
+    background-color: $white;
+    z-index: 2;
+}
+
+.hero--top {
+    position: sticky;
+    top: 0;
+    background-color: $white;
+
+    margin-top: -48px;
+    padding-right: 5px;
+    border-bottom: 1px solid $maui-mist;
+    z-index: 1;
+}
+
+.hero__privious-candidate {
+    margin-left: 0;
+    margin-right: 0;
+
+    width: 32px;
+    height: 32px;
+    cursor: pointer;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 16px);
+
+        right: 0px;
+        width: 32px;
+        height: 32px;
+
+        background-image: url(/img/icons/icon-arrow.svg);
+        background-size: 20px 20px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+.hero__candidate-wrapper {
+    padding-left: 58px;
+    margin-left: 16px;
+    margin-right: 10px;
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 20px);
+        left: 0px;
+        width: 40px;
+        height: 40px;
+        background-color: red;
+        border-radius: 50px;
+        background: url("./img/candidate-avatar.jpg"); // исправить
+        background-size: 40px 40px;
+        background-repeat: no-repeat;
+        z-index: 10;
+    }
+}
+
+.hero__candidate-name {
+    margin: 0;
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+.header__candidate-position {
+    margin: 0;
+    font-size: 13px;
+    line-height: 18px;
+    color: $spacescape;
+}
+.hero__button {
+}
+
+.hero__button--addnote {
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px;
+    background-color: transparent;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        width: 24px;
+        height: 24px;
+
+        background-image: url(/img/icons/icon-note.svg);
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+    }
+}
+.hero__button--download-resume {
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 24px;
+        height: 24px;
+
+        background-image: url(/img/icons/icon-download.svg);
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+    }
+}
+.hero__button--print {
+    width: 24px;
+    height: 24px;
+    border: none;
+    cursor: pointer;
+    margin-left: 10px;
+    margin-right: 10px;
+    background-color: transparent;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0;
+        width: 24px;
+        height: 24px;
+
+        background-image: url(/img/icons/icon-print.svg);
+        background-size: 24px 24px;
+        background-repeat: no-repeat;
+    }
+}
+
+// РЕЗЮМЕ
+
+.resume {
+}
+
+.resume__candidate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.resume__candidate-avatar {
+    margin-top: 10px;
+
+    width: 100px;
+    height: 100px;
+
+    order: 0;
+}
+
+.resume__candidate-name {
+    margin: 10px 0 0 0;
+
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+    color: $black-howl;
+
+    order: 1;
+}
+
+.resume__candidate-info {
+    margin: 6px 0 0 0;
+
+    font-size: 15px;
+    line-height: 20px;
+    color: $gluon-grey;
+
+    order: 2;
+}
+
+.resume__last-update {
+    margin: 6px 0 10px 0;
+
+    font-size: 14px;
+    line-height: 20px;
+    color: $hamiltpn-blue;
+
+    order: 3;
+
+    & span {
+        color: $linderhof-garden;
+    }
+}
+.resume__candidate-options {
+    order: 4;
+}
+.candidate-options {
+    min-height: 160px;
+    width: 100%;
+    padding: 3px 0;
+}
+
+.candidate-options__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 12px 0 12px 0;
+}
+
+.basic-button {
+    border: none;
+    padding: 10px 0;
+    background-color: $blazing-bonfire;
+    width: 100%;
+    border-radius: 7px;
+    cursor: pointer;
+
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.candidate-options__button {
+}
+
+.candidate-options__button-icon {
+    margin-left: 15px;
+}
+
+.candidate-options__in-favorites {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+    margin-left: 16px;
+    margin-right: 0px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 42px;
+        height: 42px;
+
+        background-color: $maui-mist;
+        border-radius: 50px;
+        background-image: url(/img/icons/icon-favorite.svg);
+        background-size: 22px 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.candidate-options__call {
+    width: 42px;
+    height: 42px;
+
+    cursor: pointer;
+    margin-left: 16px;
+    margin-right: 0px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 0;
+        width: 42px;
+        height: 42px;
+
+        background-color: $maui-mist;
+        border-radius: 50px;
+        background-image: url(/img/icons/icon-call.svg);
+        background-size: 30px 34px;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+}
+
+.video-interview {
+    min-height: 55px;
+}
+
+.video-interview__wrapper {
+    margin-left: 0;
+    padding-left: 72px;
+    margin-right: auto;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 21px);
+        left: 0;
+        width: 47px;
+        height: 44px;
+
+        background-image: url(/img/icons/icon-video-interview.svg);
+        background-size: 47px 44px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.video-interview__title {
+    margin: 0;
+    font-family: $basic-font-title-semibold;
+    font-size: 16px;
+    line-height: 22px;
+    color: $spacescape;
+}
+.video-interview__desc {
+    margin: 0;
+    font-size: 12px;
+    line-height: 14px;
+    color: $pharaon-purple;
+}
+.video-interview__start-video {
+    display: block;
+    width: 42px;
+    height: 42px;
+
+    cursor: pointer;
+    margin-left: 16px;
+    margin-right: 0px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 0;
+        width: 42px;
+        height: 42px;
+
+        background-color: $maui-mist;
+        border-radius: 7px;
+        background-image: url(/img/icons/icon-arrow.svg);
+        background-size: 12px 12px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: rotate(180deg);
+    }
+}
+
+.visually-hidden {
+}
+.options__list {
+}
+.options__item {
+}
+.options__link {
+}
+.options__link--think {
+}
+.options__link--video {
+}
+.options__link--office {
+}
+.options__link--ohone {
+}
+.options__link--test {
+}
+.options__link--offer {
+}
+.options__link--work {
+}
+.options__button {
+}
+.button-cancel {
+}

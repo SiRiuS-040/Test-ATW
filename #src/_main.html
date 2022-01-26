@@ -1,42 +1,54 @@
 <main class="main">
-    <section class="main__hero main-hero hero">
+    <h1 class="visually-hidden">Резюме кандидата</h1>
+
+    <section class="hero noPrint">
         <a href="#" aria-label="Предыдущий кандидат" class="hero__privious-candidate"></a>
-        <h2 class="hero__candidate-name">Комкова Екатерина</h2>
-        <p class="header__candidate-position">Художник-костюмер</p>
-
-        <button>Добавить заметку</button>
-        <a href="" download="#">Скачать анкету</a>
-        <button>Распечатать анкету</button>
-
-        <div class="hero__popup popup popup-addnote">
-            <h2 class="popup-addnote__title">Ваша заметка о кандидате</h2>
-            <input type="text" class="popup-addnote__input">
-            <div class="popup-addnote__controls">
-                <button class="basic-button popup-addnote__button popup-addnote__button--cancel">Отмена</button>
-                <button class="basic-button popup-addnote__button popup-addnote__button--save">Сохранить</button>
-            </div>
-        </div>
+        <button class="hero__button hero__button--addnote"></button>
+        <a href="" download="#" class="hero__button hero__button--download-resume"></a>
+        <button class="hero__button hero__button--print" onclick="window.print();"></button>
     </section>
 
-    <section class="resume">
+    <section class="hero hero--top noPrint">
+        <a href="#" aria-label="Предыдущий кандидат" class="hero__privious-candidate"></a>
+        <div class="hero__candidate-wrapper">
+            <h2 class="hero__candidate-name">Комкова Екатерина</h2>
+            <p class="header__candidate-position">Художник-костюмер</p>
+        </div>
+
+        <button class="hero__button hero__button--addnote"></button>
+        <a href="" download="#" class="hero__button hero__button--download-resume"></a>
+
+    </section>
+
+    <section class="resume container">
 
         <section class="resume__candidate ">
+            <img src="./img/candidate-avatar.jpg" alt="Фото кандидата" class="resume__candidate-avatar" width="100">
             <h2 class="resume__candidate-name">Комкова Екатерина</h2>
-            <img src="./img/candidate-avatar.jpg" alt="Фото кандидата" class="resume__candidate-avatar">
-            <p class="resume__candidate-description">32 года, Санкт-Петербург, м. Маяковская</p>
-            <p class="resume__last-update">Обновлено 4 мая 2021 в 7:39</p>
 
-            <div class="resume__candidate-options options">
+            <p class="resume__candidate-info">32 года, Санкт-Петербург, м. Маяковская</p>
+            <p class="resume__last-update">Обновлено <span>4 мая 2021 в 7:39</span></p>
 
-                <div class="options__wrapper">
-                    <button class="basic-button poptions__button">Предложить вакансию</button>
-                    <a href="#" class="options__in-favorites" aria-label="В избранное">В избранное</a>
-                    <a href="#" class="options__call disabled" aria-label="Позвонить">Позвонить</a>
+            <div class="resume__candidate-options candidate-options">
+
+                <div class="candidate-options__wrapper">
+                    <button class="basic-button candidate-options__button">Предложить вакансию
+                        <svg class="candidate-options__button-icon disabled" width="19" height="18" viewBox="0 0 19 18"
+                            fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.5 4.5L7.25 12.75L3.5 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="candidate-options__in-favorites" aria-label="В избранное"></button>
+                    <a href="tel:+1234567890" class="candidate-options__call disabled" aria-label="Позвонить"></a>
                 </div>
-                <div class="options__wrapper ">
-                    <h3>Видеособеседование</h3>
-                    <p>Пригласите кандидата пройти собеседование онлайн</p>
-                    <a href="#" class="options__start-video" aria-label="Начать видеособеседование">Начать</a>
+                <div class="candidate-options__wrapper candidate-options__video-interview video-interview">
+
+                    <div class="video-interview__wrapper">
+                        <h3 class="video-interview__title">Видеособеседование</h3>
+                        <p class="video-interview__desc">Пригласите кандидата пройти собеседование онлайн</p>
+                    </div>
+                    <a href="#" class="video-interview__start-video" aria-label="Начать видеособеседование"></a>
                 </div>
                 <div class="options__wrapper disabled visually-hidden">
                     <ul class="options__list">
@@ -161,8 +173,9 @@
             </ul>
         </div>
     </section>
-    <section class="hero hero-bottom">
-        <div class="options__wrapper">
+
+    <section class="hero hero--bottom">
+        <div class="hero__options options options-wrapper">
             <button>Предложить вакансию</button>
             <a href="#" class="options__in-favorites" aria-label="В избранное">В избранное</a>
             <a href="#" class="options__call" aria-label="Позвонить">Позвонить</a>
@@ -170,5 +183,13 @@
 
     </section>
 
+    <section class="hero__popup popup popup-addnote disabled">
+        <h2 class="popup-addnote__title">Ваша заметка о кандидате</h2>
+        <input type="text" class="popup-addnote__input">
+        <div class="popup-addnote__controls">
+            <button class="basic-button popup-addnote__button popup-addnote__button--cancel">Отмена</button>
+            <button class="basic-button popup-addnote__button popup-addnote__button--save">Сохранить</button>
+        </div>
+    </section>
 
 </main>
