@@ -80,8 +80,6 @@
     line-height: 18px;
     color: $spacescape;
 }
-.hero__button {
-}
 
 .hero__button--addnote {
     width: 24px;
@@ -154,9 +152,6 @@
 
 // РЕЗЮМЕ
 
-.resume {
-}
-
 .resume__candidate {
     display: flex;
     flex-direction: column;
@@ -215,6 +210,8 @@
     min-height: 160px;
     width: 100%;
     padding: 3px 0;
+
+    position: relative;
 }
 
 .candidate-options__wrapper {
@@ -222,6 +219,7 @@
     justify-content: flex-end;
     align-items: center;
     padding: 12px 0 12px 0;
+    z-index: -1;
 }
 
 .basic-button {
@@ -229,7 +227,7 @@
     padding: 10px 0;
     background-color: $blazing-bonfire;
     width: 100%;
-    border-radius: 7px;
+    border-radius: 8px;
     cursor: pointer;
 
     font-family: $basic-font-title;
@@ -245,9 +243,6 @@
     &:hover {
         background-color: $cheese-please;
     }
-}
-
-.candidate-options__button {
 }
 
 .candidate-options__button-icon {
@@ -372,36 +367,7 @@
     }
 }
 
-.visually-hidden {
-}
-.options__list {
-}
-.options__item {
-}
-.options__link {
-}
-.options__link--think {
-}
-.options__link--video {
-}
-.options__link--office {
-}
-.options__link--ohone {
-}
-.options__link--test {
-}
-.options__link--offer {
-}
-.options__link--work {
-}
-.options__button {
-}
-.button-cancel {
-}
 // Всплывающие окна
-
-.popup {
-}
 
 .overlay {
     position: fixed;
@@ -414,11 +380,7 @@
     visibility: hidden;
     opacity: 0;
 
-    // visibility: visible;
-    // opacity: 1;
-
-    &-active {
-        // transition: opacity 500ms;
+    &--active {
         visibility: visible;
         opacity: 1;
     }
@@ -431,7 +393,7 @@
     padding-top: 25px;
     margin-left: auto;
     margin-right: auto;
-    top: 100px;
+    top: 150px;
     left: 15px;
     width: calc(100% - 24px * 2 - 15px * 2);
     padding: 24px;
@@ -447,8 +409,16 @@
         width: 36px;
         height: 5px;
 
-        background-color: gray;
+        background-color: $white;
         border-radius: 3px;
+    }
+
+    visibility: hidden;
+    opacity: 0;
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
     }
 }
 .popup-addnote__title {
@@ -485,5 +455,78 @@
 
     &:hover {
         background-color: $granitine;
+    }
+}
+
+// опции кандидата
+
+.options {
+    position: absolute;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.options__list {
+    background-color: $white;
+    border-radius: 16px;
+    border: 1px solid $cold-morning;
+    box-shadow: 1px 4px 40px $matisse;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+
+.options__item {
+    background-color: $white;
+    border-bottom: 1px solid $maui-mist;
+}
+
+.options__link {
+    display: flex;
+    align-items: center;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    text-decoration: none;
+    font-family: $basic-font-text;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: $black-howl;
+}
+
+.options__icon {
+    margin-right: 12px;
+}
+
+.options__button {
+    border: 1px solid $cold-morning;
+    box-shadow: 1px 4px 40px $matisse;
+
+    margin-top: 10px;
+    color: $stay-the-night;
+    background-color: $white;
+    border-radius: 16px;
+    &:hover {
+        background-color: $cold-morning;
     }
 }
