@@ -165,7 +165,6 @@
                     <li class="main-resume__description-item">Фотография</li>
                 </ul>
             </div>
-
             <div class="resume__work-conditions work-conditions">
                 <h3 class="work-conditions__title">Занятость</h3>
                 <p class="work-conditions__desc">Полная занятость, Временная работа</p>
@@ -176,10 +175,8 @@
                 <h3 class="work-conditions__title">Готовность к переезду</h3>
                 <p class="work-conditions__desc">Москва, Воркута, Челябинск</p>
             </div>
-
             <div class="resume__section experience">
                 <h2 class="resume__section-title experience__title">Опыт работы: 2 года 5 месяцев</h2>
-
                 <div class="experience__last-job last-job">
                     <h3 class="last-job__period">Май 2013 — Ноябрь 2020 <span class="duration">1 год 9 месяцев</span>
                     </h3>
@@ -235,16 +232,36 @@
             </div>
             <section class="resume__section portfolio">
                 <h2 class="resume__section-title">Портфолио</h2>
-                <div class="resume__slider">
-                    СЛАЙДЕР
-                </div>
+                <!-- <div class="resume__slider showcase-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide showcase-carousel__item">
+                            <img src="../img/slider/slide-1.jpg" alt="слайд 1" class="showcase-carousel__image">
+                        </div>
+                        <div class="swiper-slide showcase-carousel__item">
+                            <img src="../img/slider/slide-2.jpg" alt="слайд 2" class="showcase-carousel__image">
+                        </div>
+                        <div class="swiper-slide showcase-carousel__item">
+                            <img src="../img/slider/slide-3.jpg" alt="слайд 3" class="showcase-carousel__image">
+                        </div>
+                        <div class="swiper-slide showcase-carousel__item">
+                            <img src="../img/slider/slide-4.jpg" alt="слайд 4" class="showcase-carousel__image">
+                        </div>
+                        <div class="swiper-slide showcase-carousel__item">
+                            <img src="../img/slider/slide-5.jpg" alt="слайд 5" class="showcase-carousel__image">
+                        </div>
+                        <div class="swiper-slide showcase-carousel__item">
+                            <img src="../img/slider/slide-6.jpg" alt="слайд 6" class="showcase-carousel__image">
+                        </div>
+                        <div class="swiper-slide showcase-carousel__item">
+                            <img src="../img/slider/slide-7.jpg" alt="слайд 7" class="showcase-carousel__image">
+                        </div>
+                    </div>
+                </div> -->
             </section>
         </section>
     </section>
-
     <section class="response-history container">
         <h2 class="response-history__title">История откликов</h2>
-
         <div class="response-history__wrapper">
             <ul class="response-history__list">
                 <li class="response-history__item response">
@@ -293,8 +310,6 @@
                                     d="M15.3942 19.2444C16.4068 19.2444 17.378 18.8421 18.094 18.1261C18.8101 17.41 19.2124 16.4388 19.2124 15.4262C19.2124 14.4135 18.8101 13.4423 18.094 12.7263C17.378 12.0102 16.4068 11.6079 15.3942 11.6079C14.3815 11.6079 13.4103 12.0102 12.6943 12.7263C11.9782 13.4423 11.5759 14.4135 11.5759 15.4262C11.5759 16.4388 11.9782 17.41 12.6943 18.1261C13.4103 18.8421 14.3815 19.2444 15.3942 19.2444ZM15.3942 13.3049C15.5067 13.3049 15.6146 13.3496 15.6941 13.4292C15.7737 13.5087 15.8184 13.6167 15.8184 13.7292V15.0019H17.0911C17.2037 15.0019 17.3116 15.0466 17.3911 15.1262C17.4707 15.2057 17.5154 15.3136 17.5154 15.4262C17.5154 15.5387 17.4707 15.6466 17.3911 15.7262C17.3116 15.8057 17.2037 15.8504 17.0911 15.8504H15.8184V17.1232C15.8184 17.2357 15.7737 17.3436 15.6941 17.4231C15.6146 17.5027 15.5067 17.5474 15.3942 17.5474C15.2816 17.5474 15.1737 17.5027 15.0942 17.4231C15.0146 17.3436 14.9699 17.2357 14.9699 17.1232V15.8504H13.6972C13.5846 15.8504 13.4767 15.8057 13.3972 15.7262C13.3176 15.6466 13.2729 15.5387 13.2729 15.4262C13.2729 15.3136 13.3176 15.2057 13.3972 15.1262C13.4767 15.0466 13.5846 15.0019 13.6972 15.0019H14.9699V13.7292C14.9699 13.6167 15.0146 13.5087 15.0942 13.4292C15.1737 13.3496 15.2816 13.3049 15.3942 13.3049Z"
                                     fill="white" />
                             </svg>
-
-
                             28.10.21
                         </p>
                         <p class="response__type">
@@ -307,11 +322,17 @@
         </div>
     </section>
 
-    <section class="hero hero--bottom">
-        <div class="hero__options options-wrapper">
-            <button>Предложить вакансию</button>
-            <a href="#" class="options__in-favorites" aria-label="В избранное">В избранное</a>
-            <a href="#" class="options__call" aria-label="Позвонить">Позвонить</a>
+    <section class="hero-bottom">
+        <div class="candidate-options__wrapper hero-bottom__wrapper ">
+            <button class="basic-button candidate-options__button">Предложить вакансию
+                <svg class="candidate-options__button-icon disabled" width="19" height="18" viewBox="0 0 19 18"
+                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.5 4.5L7.25 12.75L3.5 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="candidate-options__in-favorites" aria-label="В избранное"></button>
+            <a href="tel:+1234567890" class="candidate-options__call disabled" aria-label="Позвонить"></a>
         </div>
     </section>
 

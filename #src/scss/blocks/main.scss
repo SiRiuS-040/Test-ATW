@@ -1,3 +1,11 @@
+.main {
+    @media (min-width: $tablet-width) {
+        width: 701px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .hero {
     min-height: 48px;
     display: flex;
@@ -51,7 +59,7 @@
     margin-left: 16px;
     margin-right: 10px;
     position: relative;
-    &::before {
+    &::after {
         content: "";
         position: absolute;
         top: calc(50% - 20px);
@@ -60,7 +68,7 @@
         height: 40px;
         background-color: red;
         border-radius: 50px;
-        background: url("./img/candidate-avatar.jpg"); // исправить
+        background-image: url("../img/candidate-avatar.jpg"); // исправить
         background-size: 40px 40px;
         background-repeat: no-repeat;
         z-index: 10;
@@ -526,6 +534,7 @@
 
 .portfolio {
 }
+
 .resume__slider {
 }
 
@@ -555,6 +564,14 @@
     margin: 0;
     padding: 0;
     list-style: none;
+
+    @media (min-width: $tablet-width) {
+        margin-top: 16px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        // justify-content: space-between;
+        grid-gap: 20px;
+    }
 }
 .response-history__item {
 }
@@ -567,6 +584,11 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+
+    @media (min-width: $tablet-width) {
+        width: 300px;
+        margin: 0;
+    }
 }
 .response__date {
     margin: 0;
@@ -603,6 +625,21 @@
     font-size: 17px;
     line-height: 20px;
     color: $gluon-grey;
+}
+
+.hero-bottom {
+    position: sticky;
+
+    bottom: 0;
+    height: 58px;
+    width: 100%;
+
+    background-color: $white;
+}
+
+.hero-bottom__wrapper {
+    padding: 8px;
+    // z-index: 10;
 }
 
 // Всплывающие окна

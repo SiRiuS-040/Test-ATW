@@ -10,6 +10,7 @@ const path = {
         js: project_folder + "/js/",
         img: project_folder + "/img/",
         fonts: project_folder + "/fonts/",
+        libs: project_folder + "/libs/",
     },
     src: {
         html: [source_folder + "/*.html", "!" + source_folder + "/_*.html"],
@@ -17,12 +18,14 @@ const path = {
         js: source_folder + "/js/*.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
         fonts: source_folder + "/fonts/*.ttf",
+        libs: source_folder + "/libs/**/*",
     },
     watch: {
         html: source_folder + "/**/*.html",
         css: source_folder + "/scss/**/*.scss",
         js: source_folder + "/js/**/*.js",
         img: source_folder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
+        libs: source_folder + "/libs/",
     },
     clean: "./" + project_folder + "/"
 };
@@ -67,6 +70,7 @@ function html() {
         .pipe(dest(path.build.html))
         .pipe(browsersync.stream())
 }
+
 
 function css() {
     return src(path.src.css)
@@ -132,6 +136,13 @@ function images() {
         .pipe(browsersync.stream())
 }
 
+function libs() {
+    return src(path.src.libs)
+        .pipe(dest(path.build.libs))
+        .pipe(browsersync.stream())
+}
+
+
 function fonts() {
     src(path.src.fonts)
         .pipe(ttf2woff())
@@ -191,15 +202,17 @@ function watсhFiles() {
     gulp.watch([path.watch.css], css)
     gulp.watch([path.watch.js], js)
     gulp.watch([path.watch.img], images)
+    gulp.watch([path.watch.libs], libs)
 }
 
 function clean() {
     return del(path.clean);
 }
 
-const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts), fontsStyle);
+const build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts, libs), fontsStyle);
 const watch = gulp.parallel(build, watсhFiles, browserSync);
 
+exports.libs = libs;
 exports.fontsStyle = fontsStyle;
 exports.fonts = fonts;
 exports.images = images;
