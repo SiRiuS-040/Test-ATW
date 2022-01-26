@@ -3,7 +3,8 @@
 
     <section class="hero noPrint">
         <a href="#" aria-label="Предыдущий кандидат" class="hero__privious-candidate"></a>
-        <button class="hero__button hero__button--addnote"></button>
+        <a href="#addnote" class="hero__button hero__button--addnote"></a>
+        <!-- <button class="hero__button hero__button--addnote" href="#addnote"></button> -->
         <a href="" download="#" class="hero__button hero__button--download-resume"></a>
         <button class="hero__button hero__button--print" onclick="window.print();"></button>
     </section>
@@ -14,8 +15,8 @@
             <h2 class="hero__candidate-name">Комкова Екатерина</h2>
             <p class="header__candidate-position">Художник-костюмер</p>
         </div>
-
-        <button class="hero__button hero__button--addnote"></button>
+        <a href="#addnote" class="hero__button hero__button--addnote"></a>
+        <!-- <button class="hero__button hero__button--addnote"></button> -->
         <a href="" download="#" class="hero__button hero__button--download-resume"></a>
 
     </section>
@@ -50,6 +51,7 @@
                     </div>
                     <a href="#" class="video-interview__start-video" aria-label="Начать видеособеседование"></a>
                 </div>
+
                 <div class="options__wrapper disabled visually-hidden">
                     <ul class="options__list">
                         <li class="options__item">
@@ -183,12 +185,14 @@
 
     </section>
 
-    <section class="hero__popup popup popup-addnote disabled">
-        <h2 class="popup-addnote__title">Ваша заметка о кандидате</h2>
-        <input type="text" class="popup-addnote__input">
-        <div class="popup-addnote__controls">
-            <button class="basic-button popup-addnote__button popup-addnote__button--cancel">Отмена</button>
-            <button class="basic-button popup-addnote__button popup-addnote__button--save">Сохранить</button>
+    <section class="popup overlay " id="addnote">
+        <div class="popup__addnote popup-addnote">
+            <h2 class="popup-addnote__title">Ваша заметка о кандидате</h2>
+            <textarea placeholder="Введите текст" class="popup-addnote__input"></textarea>
+            <div class="popup-addnote__controls">
+                <button class="basic-button popup-addnote__button popup-addnote__button--cancel">Отмена</button>
+                <button class="basic-button popup-addnote__button popup-addnote__button--save">Сохранить</button>
+            </div>
         </div>
     </section>
 
