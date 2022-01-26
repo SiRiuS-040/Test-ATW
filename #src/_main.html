@@ -20,18 +20,13 @@
         <a href="" download="#" class="hero__button hero__button--download-resume"></a>
 
     </section>
-
     <section class="resume container">
-
         <section class="resume__candidate ">
             <img src="./img/candidate-avatar.jpg" alt="Фото кандидата" class="resume__candidate-avatar" width="100">
             <h2 class="resume__candidate-name">Комкова Екатерина</h2>
-
             <p class="resume__candidate-info">32 года, Санкт-Петербург, м. Маяковская</p>
             <p class="resume__last-update">Обновлено <span>4 мая 2021 в 7:39</span></p>
-
             <div class="resume__candidate-options candidate-options">
-
                 <div class="candidate-options__wrapper">
                     <button class="basic-button candidate-options__button">Предложить вакансию
                         <svg class="candidate-options__button-icon disabled" width="19" height="18" viewBox="0 0 19 18"
@@ -43,7 +38,6 @@
                     <button class="candidate-options__in-favorites" aria-label="В избранное"></button>
                     <a href="tel:+1234567890" class="candidate-options__call disabled" aria-label="Позвонить"></a>
                 </div>
-
                 <div class="candidate-options__wrapper candidate-options__video-interview video-interview">
                     <div class="video-interview__wrapper">
                         <h3 class="video-interview__title">Видеособеседование</h3>
@@ -51,7 +45,6 @@
                     </div>
                     <a href="#" class="video-interview__start-video" aria-label="Начать видеособеседование"></a>
                 </div>
-
                 <div class="candidate-options__menu options options --active">
                     <ul class="options__list">
                         <li class="options__item">
@@ -161,85 +154,116 @@
                 </div>
             </div>
         </section>
-
-        <section>
-            <div>
-                <h2>Художник-костюмер</h2>
-                <p>55 000 ₽</p>
-                <p>Искусство, развлечения, масс-медиа </p>
-                <ul>
-                    <li>Дизайн, графика, живопись </li>
-                    <li>Корректор, ретушер </li>
-                    <li>Фотография</li>
+        <section class="resume__main-section main-resume">
+            <div class="main-resume__wrapper">
+                <h2 class="main-resume__position">Художник-костюмер</h2>
+                <p class="main-resume__salary">55 000 ₽</p>
+                <p class="main-resume__speciality">Искусство, развлечения, масс-медиа </p>
+                <ul class="main-resume__description-list">
+                    <li class="main-resume__description-item">Дизайн, графика, живопись </li>
+                    <li class="main-resume__description-item">Корректор, ретушер </li>
+                    <li class="main-resume__description-item">Фотография</li>
                 </ul>
             </div>
 
-            <div>
-                <h3>Занятость</h3>
-                <p>Полная занятость, Временная работа</p>
-            </div>
-            <div>
-                <h3>График работы</h3>
-                <p>Полный день, Гибкий график, Удаленная работа</p>
-            </div>
-            <div>
-                <h3>Проживание</h3>
-                <p>Санкт-Петербург, м. Политехническая</p>
-            </div>
-            <div>
-                <h3>Готовность к переезду</h3>
+            <div class="resume__work-conditions work-conditions">
+                <h3 class="work-conditions__title">Занятость</h3>
+                <p class="work-conditions__desc">Полная занятость, Временная работа</p>
+                <h3 class="work-conditions__title">График работы</h3>
+                <p class="work-conditions__desc">Полный день, Гибкий график, Удаленная работа</p>
+                <h3 class="work-conditions__title">Проживание</h3>
+                <p class="work-conditions__desc">Санкт-Петербург, м. Политехническая</p>
+                <h3 class="work-conditions__title">Готовность к переезду</h3>
                 <p>Москва, Воркута, Челябинск</p>
             </div>
-        </section>
 
-        <section>
-            <h2>Опыт работы: 2 года 5 месяцев</h2>
+            <div class="resume__section experience">
+                <h2 class="resume__section-title experience__title">Опыт работы: 2 года 5 месяцев</h2>
 
-            <div>
-                <h3>Май 2013 — Ноябрь 2020 <span>1 год 9 месяцев</span> </h3>
-                <p>Лента, федеральная розничная сеть</p>
-                <p>www.lenta.ru</p>
-
-                <p>Менеджер по экономической безопасности</p>
-                <h4>Обязанности</h4>
-
-                <p>Работа с лидами </p>
-                <p> Проведение презентаций </p>
-
-                <p> Поддержка кодовой базы системы платежных терминалов, включающей POS интерфейс пользователя, драйвера
-                    устройств, приложение мониторинга и SQL базу данных: </p>
-                <p> - Исправление багов;</p>
-                <p> - Внедрение поддержки новых устройств в т.ч. написание несколько драйверов для специфического
-                    оборудования, используя спецификации;</p>
-                <p> - Изменение внутреннего сетевого протокола приложения для интеграции с обновленным платежным
-                    шлюзом;</p>
-                <p> - Сбор и анализ статистики работы сети терминалов для оценки эффективности отдельных
-                    точек оплаты;</p>
-                <p> - Обработка пользовательских отзывов и предложений;</p>
-                <p> Сборка дистрибутивов обновленний ПО</p>
-
-                <button>Скрыть</button>
+                <div class="experience__last-job last-job">
+                    <h3 class="last-job__period">Май 2013 — Ноябрь 2020 <span class="duration">1 год 9 месяцев</span>
+                    </h3>
+                    <p class="last-job__title">Лента, федеральная розничная сеть</p>
+                    <p class="last-job__info">www.lenta.ru</p>
+                    <p class="last-job__position">Менеджер по экономической безопасности</p>
+                    <div class="last-job__wrapper">
+                        <h4 class="last-job__duties-title">Обязанности</h4>
+                        <!-- <p class="last-job__duties">Работа с лидами </p>
+                        <p class="last-job__duties"> Проведение презентаций </p>
+                        <p class="last-job__duties"> Поддержка кодовой базы системы платежных терминалов, включающей POS
+                            интерфейс пользователя,
+                            драйвера
+                            устройств, приложение мониторинга и SQL базу данных: </p>
+                        <p class="last-job__duties"> - Исправление багов;</p>
+                        <p class="last-job__duties"> - Внедрение поддержки новых устройств в т.ч. написание несколько
+                            драйверов для специфического
+                            оборудования, используя спецификации;</p>
+                        <p class="last-job__duties"> - Изменение внутреннего сетевого протокола приложения для
+                            интеграции с
+                            обновленным платежным
+                            шлюзом;</p>
+                        <p class="last-job__duties"> - Сбор и анализ статистики работы сети терминалов для оценки
+                            эффективности отдельных
+                            точек оплаты;</p>
+                        <p class="last-job__duties"> - Обработка пользовательских отзывов и предложений;</p>
+                        <p class="last-job__duties"> Сборка дистрибутивов обновленний ПО</p> -->
+                        <p class="last-job__duties">
+                            Работа с лидами
+                            <br>
+                            Проведение презентаций
+                            <br>
+                            Поддержка кодовой базы системы платежных терминалов, включающей POS интерфейс пользователя,
+                            драйвера устройств, приложение мониторинга и SQL базу данных:
+                            <br>
+                            - Исправление багов;
+                            <br>
+                            - Внедрение поддержки новых устройств в т.ч. написание несколько драйверов для
+                            специфического
+                            оборудования, используя спецификации;
+                            <br>
+                            - Изменение внутреннего сетевого протокола приложения для интеграции с обновленным платежным
+                            шлюзом;
+                            <br>
+                            - Сбор и анализ статистики работы сети терминалов для оценки эффективности отдельных
+                            точек оплаты;
+                            <br>
+                            - Обработка пользовательских отзывов и предложений;
+                            <br>
+                            Сборка дистрибутивов обновленний ПО
+                        </p>
+                        <button class="last-job__duties-hider">Скрыть</button>
+                    </div>
+                    <div class="last-job__wrapper">
+                        <h4 class="last-job__achievements-title">Достижения</h4>
+                        <p class="last-job__achievements">
+                            Работа с лидами
+                            <br>
+                            Проведение презентаций
+                            <br>
+                            Lorem, ipsum dolor.
+                            <br>
+                            Lorem ipsum dolor sit.
+                            <br>
+                            Lorem ipsum dolor sit amet consectetur.
+                            <br>
+                            Lorem ipsum dolor sit amet.
+                        </p>
+                        <button class="last-job__achievements-hider">Показать полностью...</button>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h4>Достижения</h4>
-                <p>Работа с лидами
-                    <br>
-                    Проведение презентаций
-                </p>
-                <button>Показать полностью...</button>
-            </div>
 
-        </section>
-        <section>
-            <h2>Портфолио</h2>
-            <div class="resume__slider">
-                СЛАЙДЕР
-            </div>
+            <section class="resume__section portfolio">
+                <h2 class="resume__section-title">Портфолио</h2>
+                <div class="resume__slider">
+                    СЛАЙДЕР
+                </div>
+            </section>
         </section>
     </section>
 
-    <section class="response-history ">
-        <h2>История откликов</h2>
+    <section class="response-history">
+        <h2 class="response-history__title">История откликов</h2>
 
         <div class="response-history__wrapper">
             <ul class="response-history__list">
@@ -266,8 +290,8 @@
 
     </section>
 
-    <section class="popup overlay overlay--active">
-        <div class="popup__addnote popup-addnote popup-addnote--active ">
+    <section class="popup overlay overlay --active">
+        <div class="popup__addnote popup-addnote popup-addnote --active ">
             <h2 class="popup-addnote__title">Ваша заметка о кандидате</h2>
             <textarea placeholder="Введите текст" class="popup-addnote__input"></textarea>
             <div class="popup-addnote__controls">
