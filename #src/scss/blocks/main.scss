@@ -207,6 +207,8 @@
     order: 4;
 }
 
+// раздел профиля кандидата
+
 .candidate-options {
     min-height: 160px;
     width: 100%;
@@ -366,6 +368,241 @@
         background-position: center;
         transform: rotate(180deg);
     }
+}
+
+// основной раздел резюме
+
+.main-resume__position {
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+}
+
+.main-resume__salary {
+    font-family: $basic-font-title-semibold;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $gluon-grey;
+}
+.main-resume__speciality {
+    font-family: $basic-font-text;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+}
+.main-resume__description-list {
+    font-family: $basic-font-text;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.work-conditions__title {
+    margin: 0;
+    margin-top: 16px;
+
+    font-family: $basic-font-text;
+    font-weight: 400;
+    font-size: 16px;
+    color: $pharaon-purple;
+}
+.work-conditions__desc {
+    margin: 0;
+}
+
+.resume__section-title {
+    margin: 20px 0px;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 22px;
+
+    font-family: $basic-font-text;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    background-color: $wash-me;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 1px;
+        width: calc(100% - 10px);
+        border-bottom: 1px solid $icelandic-winds;
+    }
+}
+
+.last-job {
+    padding: 8px 8px;
+}
+
+.last-job__period {
+    margin: 0;
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+.duration {
+    color: $pharaon-purple;
+}
+
+.last-job__title {
+    margin: 0;
+    margin-top: 16px;
+    font-family: $basic-font-text;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+}
+.last-job__info {
+    margin: 0;
+    color: $pharaon-purple;
+}
+.last-job__position {
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    font-size: 18px;
+    line-height: 22px;
+}
+
+.last-job__duties-title {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.last-job__duties {
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: $pharaon-purple;
+}
+
+.button-hider {
+    border: 0;
+    cursor: pointer;
+    color: $sanctuary-spa;
+    background-color: transparent;
+
+    font-family: $basic-font-text;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    width: 100%;
+    text-align: left;
+}
+
+.last-job__achievements-title {
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    line-height: 22px;
+    color: $gluon-grey;
+}
+.last-job__achievements {
+    margin: 0;
+
+    margin-bottom: 10px;
+    color: $gluon-grey;
+}
+
+// СЛАЙДЕР
+
+.portfolio {
+}
+.resume__slider {
+}
+
+// ИСТОРИЯ ОТКЛИКОВ
+
+.response-history {
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+.container {
+}
+.response-history__title {
+    margin: 0;
+    padding: 15px 0;
+    text-transform: uppercase;
+    font-family: $basic-font-text-special;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $nocturnal;
+
+    border-bottom: 1px solid $clear-vision;
+}
+.response-history__wrapper {
+}
+.response-history__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.response-history__item {
+}
+.response {
+}
+.response__link {
+    cursor: pointer;
+
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.response__date {
+    margin: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 20px;
+
+    color: $gluon-grey;
+}
+
+.response__type {
+    margin: 0;
+    padding: 15px 0 15px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    font-family: $basic-font-text;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 14px;
+
+    color: $nocturnal;
+}
+.response__candidate-position {
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 20px;
+    color: $gluon-grey;
 }
 
 // Всплывающие окна
