@@ -6,9 +6,7 @@
         position: absolute;
         top: 320px;
         left: calc(50% + 240px);
-
         width: 290px;
-
         border-radius: 10px;
         border: 1px solid $clear-vision;
 
@@ -103,11 +101,11 @@
 .response__date {
     margin: 0;
 
-    width: 60px;
+    width: 62px;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 
     font-family: $basic-font-title;
     font-weight: 500;
@@ -125,11 +123,15 @@
         height: 100%;
 
         top: 0;
-        right: -5px;
+        right: 0px;
 
         background-color: $black;
         border-radius: 50px;
     }
+}
+
+.response__icon {
+    margin-left: 14px;
 }
 
 .response--video .response__date {
@@ -152,9 +154,10 @@
 
 .response__type {
     margin: 0;
-    padding: 15px 0 15px 20px;
+    padding: 13px 0 15px 10px;
 
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
 
     font-family: $basic-font-text;
@@ -164,7 +167,9 @@
 
     color: $nocturnal;
 }
+
 .response__candidate-position {
+    margin-top: 4px;
     font-family: $basic-font-title;
     font-weight: 500;
     font-size: 17px;

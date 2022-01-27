@@ -18,6 +18,7 @@
 
 .candidate__wrapper {
     text-align: center;
+    margin-top: 5px;
 
     @media (min-width: $desktop-width) {
         margin-left: 19px;
@@ -31,7 +32,7 @@
 }
 
 .candidate__avatar {
-    margin-top: 10px;
+    // margin-top: 10px;
 
     width: 100px;
     height: 100px;
@@ -43,7 +44,7 @@
 
 .candidate__avatar-indicator {
     position: absolute;
-    top: 90px;
+    top: 83px;
     left: calc(50% + 26px);
 
     @media (min-width: $desktop-width) {
@@ -61,7 +62,7 @@
 }
 
 .candidate__name {
-    margin: 10px 0 0 0;
+    margin: 0 0 0 0;
 
     font-family: $basic-font-title;
     font-weight: 500;
@@ -102,7 +103,7 @@
 }
 
 .candidate__last-update {
-    margin: 6px 0 10px 0;
+    margin: 6px 0 0 0;
 
     font-size: 14px;
     line-height: 20px;
