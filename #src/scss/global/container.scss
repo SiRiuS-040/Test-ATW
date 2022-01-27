@@ -1,4 +1,8 @@
 .container {
     width: auto;
     padding: 0 15px;
+
+    @media (min-width: $desktop-width) {
+        padding: 0 0px;
+    }
 }

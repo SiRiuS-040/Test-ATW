@@ -1,13 +1,22 @@
 .main {
     @media (min-width: $tablet-width) {
-        width: 701px;
+        width: 700px;
         margin-left: auto;
         margin-right: auto;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 1056px;
+        margin: 72px auto;
+        padding: 42px;
+        background-color: $white;
+        border-radius: 16px;
+        box-shadow: 1px 4px 12px $matisse;
     }
 }
 
 .hero {
-    min-height: 48px;
+    height: 48px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -16,6 +25,16 @@
 
     background-color: $white;
     z-index: 2;
+
+    @media (min-width: $desktop-width) {
+        position: absolute;
+        height: 24px;
+
+        left: 648px;
+        left: calc(50% + 74px);
+        width: 104px;
+        z-index: 0;
+    }
 }
 
 .hero--top {
@@ -27,6 +46,10 @@
     padding-right: 5px;
     border-bottom: 1px solid $maui-mist;
     z-index: 1;
+
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
 }
 
 .hero__privious-candidate {
@@ -37,6 +60,10 @@
     height: 32px;
     cursor: pointer;
     position: relative;
+
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
 
     &::before {
         content: "";
@@ -159,24 +186,61 @@
 }
 
 // РЕЗЮМЕ
+.resume {
+    @media (min-width: $desktop-width) {
+        display: grid;
+        grid-template-columns: 710px 290px;
+        grid-column-gap: 56px;
+        grid-template-areas:
+            "a  d"
+            "b  d"
+            "c  f";
 
-.resume__candidate {
+        border: 1px solid red;
+    }
+}
+
+// раздел профиля кандидата
+
+.candidate {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    @media (min-width: $desktop-width) {
+        grid-area: a;
+
+        display: grid;
+        grid-template-columns: 100px 1fr;
+
+        height: 100px;
+
+        border: 1px solid red;
+    }
 }
 
-.resume__candidate-avatar {
+.candidate__wrapper {
+    text-align: center;
+
+    @media (min-width: $desktop-width) {
+        margin-left: 19px;
+        text-align: left;
+    }
+}
+
+.candidate__avatar {
     margin-top: 10px;
 
     width: 100px;
     height: 100px;
 
-    order: 0;
+    @media (min-width: $desktop-width) {
+        margin: 0;
+    }
 }
 
-.resume__candidate-name {
+.candidate__name {
     margin: 10px 0 0 0;
 
     font-family: $basic-font-title;
@@ -185,37 +249,36 @@
     line-height: 24px;
     color: $black-howl;
 
-    order: 1;
+    @media (min-width: $desktop-width) {
+        margin: 0;
+    }
 }
 
-.resume__candidate-info {
+.candidate__info {
     margin: 6px 0 0 0;
 
     font-size: 15px;
     line-height: 20px;
     color: $gluon-grey;
 
-    order: 2;
+    @media (min-width: $desktop-width) {
+    }
 }
 
-.resume__last-update {
+.candidate__last-update {
     margin: 6px 0 10px 0;
 
     font-size: 14px;
     line-height: 20px;
     color: $hamiltpn-blue;
 
-    order: 3;
-
     & span {
         color: $linderhof-garden;
     }
-}
-.resume__candidate-options {
-    order: 4;
-}
 
-// раздел профиля кандидата
+    @media (min-width: $desktop-width) {
+    }
+}
 
 .candidate-options {
     min-height: 160px;
@@ -223,6 +286,12 @@
     padding: 3px 0;
 
     position: relative;
+
+    @media (min-width: $desktop-width) {
+        grid-area: d;
+        padding: 60px 0 0 0;
+        border: 1px solid red;
+    }
 }
 
 .candidate-options__wrapper {
@@ -231,6 +300,10 @@
     align-items: center;
     padding: 12px 0 12px 0;
     z-index: -1;
+
+    @media (min-width: $desktop-width) {
+        padding: 0;
+    }
 }
 
 .basic-button {
@@ -254,6 +327,24 @@
     &:hover {
         background-color: $cheese-please;
     }
+
+    @media (min-width: $desktop-width) {
+        padding: 11px 0;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.resume__candidate-options {
+    @media (min-width: $desktop-width) {
+        // display: none;
+    }
+}
+
+.candidate-options__button {
+    // @media (min-width: $desktop-width) {
+    //     display: none;
+    // }
 }
 
 .candidate-options__button-icon {
@@ -380,11 +471,24 @@
 
 // основной раздел резюме
 
+.main-resume {
+    @media (min-width: $desktop-width) {
+        border: 1px solid red;
+        margin-top: 24px;
+        color: $black-howl;
+    }
+}
+
 .main-resume__position {
+    margin: 0;
     font-family: $basic-font-title;
     font-weight: 500;
     font-size: 22px;
     line-height: 24px;
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+    }
 }
 
 .main-resume__salary {
@@ -393,18 +497,64 @@
     font-size: 16px;
     line-height: 22px;
     color: $gluon-grey;
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+        position: absolute;
+        top: 115px;
+        left: calc(50% + 240px);
+
+        font-family: $basic-font-title;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 36px;
+    }
 }
+
 .main-resume__speciality {
     font-family: $basic-font-text;
     font-weight: 400;
     font-size: 18px;
     line-height: 22px;
+
+    @media (min-width: $desktop-width) {
+        margin: 8px 0 6px 0;
+
+        font-family: $basic-font-title;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 .main-resume__description-list {
     font-family: $basic-font-text;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.work-conditions {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    @media (min-width: $desktop-width) {
+        margin-top: 16px;
+    }
+}
+
+.work-conditions__item {
+    @media (min-width: $desktop-width) {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
 }
 
 .work-conditions__title {
@@ -415,9 +565,22 @@
     font-weight: 400;
     font-size: 16px;
     color: $pharaon-purple;
+
+    @media (min-width: $desktop-width) {
+        margin: 0 6px 0 0;
+        min-width: 170px;
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
+
 .work-conditions__desc {
     margin: 0;
+
+    @media (min-width: $desktop-width) {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
 .resume__section-title {
@@ -436,19 +599,41 @@
 
     position: relative;
 
+    @media (min-width: $desktop-width) {
+        margin: 32px 0 20px 0;
+        font-size: 14px;
+        line-height: 18px;
+        padding-left: 10px;
+
+        text-transform: uppercase;
+    }
+
+    & span {
+        @media (min-width: $desktop-width) {
+            text-transform: none;
+            font-family: $basic-font-title-semibold;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 22px;
+        }
+    }
+
     &::before {
         content: "";
         position: absolute;
         bottom: 0;
         right: 0;
         height: 1px;
-        width: calc(100% - 10px);
+        width: 100%;
         border-bottom: 1px solid $icelandic-winds;
     }
 }
 
 .last-job {
     padding: 8px 8px;
+    @media (min-width: $desktop-width) {
+        padding: 0;
+    }
 }
 
 .last-job__period {
@@ -460,22 +645,61 @@
 
     display: flex;
     justify-content: space-between;
+
+    @media (min-width: $desktop-width) {
+        font-family: $basic-font-title-semibold;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+    }
 }
 .duration {
     color: $pharaon-purple;
+
+    @media (min-width: $desktop-width) {
+        font-family: $basic-font-text;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
-.last-job__title {
+.last-job__place {
     margin: 0;
     margin-top: 16px;
     font-family: $basic-font-text;
     font-weight: 500;
     font-size: 18px;
     line-height: 22px;
+
+    @media (min-width: $desktop-width) {
+        padding-left: 24px;
+        margin-top: 18px;
+        font-size: 14px;
+        line-height: 20px;
+        position: relative;
+    }
+
+    &::before {
+        @media (min-width: $desktop-width) {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-image: url(../img/icons/icon-firm.svg);
+        }
+    }
 }
-.last-job__info {
+.last-job__place-info {
     margin: 0;
     color: $pharaon-purple;
+
+    @media (min-width: $desktop-width) {
+        font-size: 12px;
+        line-height: 14px;
+    }
 }
 .last-job__position {
     margin: 0;
@@ -484,20 +708,54 @@
 
     font-size: 18px;
     line-height: 22px;
+
+    @media (min-width: $desktop-width) {
+        padding-left: 24px;
+        font-family: $basic-font-text;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        position: relative;
+    }
+
+    &::before {
+        @media (min-width: $desktop-width) {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-image: url(../img/icons/icon-job.svg);
+        }
+    }
 }
 
-.last-job__duties-title {
+.last-job__info-title {
     margin: 0;
 
     font-size: 18px;
     font-weight: 500;
+
+    @media (min-width: $desktop-width) {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
-.last-job__duties {
+.last-job__info-list {
+    padding: 0 0 0 25px;
     margin: 0;
     margin-top: 10px;
     margin-bottom: 10px;
     color: $pharaon-purple;
+
+    @media (min-width: $desktop-width) {
+        font-size: 14px;
+        line-height: 20px;
+
+        color: $black-howl;
+    }
 }
 
 .button-hider {
@@ -512,22 +770,12 @@
     font-weight: 400;
     width: 100%;
     text-align: left;
-}
 
-.last-job__achievements-title {
-    margin: 0;
-    margin-top: 16px;
-    margin-bottom: 10px;
-
-    font-size: 16px;
-    line-height: 22px;
-    color: $gluon-grey;
-}
-.last-job__achievements {
-    margin: 0;
-
-    margin-bottom: 10px;
-    color: $gluon-grey;
+    @media (min-width: $desktop-width) {
+        font-size: 12px;
+        line-height: 14px;
+        color: $pharaon-purple;
+    }
 }
 
 // СЛАЙДЕР
@@ -543,6 +791,15 @@
 .response-history {
     margin-top: 16px;
     margin-bottom: 16px;
+
+    @media (min-width: $desktop-width) {
+        position: absolute;
+        top: 300px;
+        left: calc(50% + 240px);
+
+        border-radius: 10px;
+        border: 1px solid $clear-vision;
+    }
 }
 .container {
 }
@@ -572,11 +829,15 @@
         // justify-content: space-between;
         grid-gap: 20px;
     }
+
+    @media (min-width: $desktop-width) {
+        display: block;
+    }
 }
-.response-history__item {
-}
+
 .response {
 }
+
 .response__link {
     cursor: pointer;
 
@@ -588,6 +849,10 @@
     @media (min-width: $tablet-width) {
         width: 300px;
         margin: 0;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 290px;
     }
 }
 .response__date {
@@ -627,6 +892,36 @@
     color: $gluon-grey;
 }
 
+.socials {
+    display: none;
+    @media (min-width: $desktop-width) {
+        display: block;
+
+        position: absolute;
+        top: 600px;
+        left: calc(50% + 240px);
+    }
+}
+.social__list {
+    width: 290px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $desktop-width) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.social__item {
+}
+.social__link {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
 .hero-bottom {
     position: sticky;
 
@@ -635,6 +930,10 @@
     width: 100%;
 
     background-color: $white;
+
+    @media (min-width: $tablet-width) {
+        display: none;
+    }
 }
 
 .hero-bottom__wrapper {
@@ -676,6 +975,12 @@
     flex-direction: column;
     background-color: $white;
 
+    @media (min-width: $tablet-width) {
+        width: 442px;
+        left: calc(50% - 442px / 2);
+        border-radius: 16px;
+    }
+
     &::before {
         content: "";
         position: absolute;
@@ -686,6 +991,10 @@
 
         background-color: $white;
         border-radius: 3px;
+
+        @media (min-width: $tablet-width) {
+            display: none;
+        }
     }
 
     visibility: hidden;
@@ -704,6 +1013,12 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 22px;
+
+    @media (min-width: $tablet-width) {
+        border: none;
+        font-size: 18px;
+        line-height: 24px;
+    }
 }
 
 .popup-addnote__input {
@@ -716,12 +1031,27 @@
     font-weight: 400;
     font-size: 15px;
     line-height: 20px;
+
+    @media (min-width: $tablet-width) {
+        border-radius: 8px;
+        border: 1px solid $clear-vision;
+    }
+
+    &::placeholder {
+        @media (min-width: $tablet-width) {
+            color: $white;
+        }
+    }
 }
 .popup-addnote__controls {
     margin-top: 32px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
+
+    @media (min-width: $tablet-width) {
+        grid-gap: 16px;
+    }
 }
 
 .popup-addnote__button--cancel {
