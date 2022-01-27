@@ -1,0 +1,128 @@
+.last-job {
+    padding: 8px 8px;
+    @media (min-width: $desktop-width) {
+        padding: 0;
+    }
+}
+
+.last-job__period {
+    margin: 0;
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+
+    display: flex;
+    justify-content: space-between;
+
+    @media (min-width: $desktop-width) {
+        font-family: $basic-font-title-semibold;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+.duration {
+    color: $pharaon-purple;
+
+    @media (min-width: $desktop-width) {
+        font-family: $basic-font-text;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.last-job__place {
+    margin: 0;
+    margin-top: 16px;
+    font-family: $basic-font-text;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+
+    @media (min-width: $desktop-width) {
+        padding-left: 24px;
+        margin-top: 18px;
+        font-size: 14px;
+        line-height: 20px;
+        position: relative;
+    }
+
+    &::before {
+        @media (min-width: $desktop-width) {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-image: url(../img/icons/icon-firm.svg);
+        }
+    }
+}
+.last-job__place-info {
+    margin: 0;
+    color: $pharaon-purple;
+
+    @media (min-width: $desktop-width) {
+        font-size: 12px;
+        line-height: 14px;
+    }
+}
+.last-job__position {
+    margin: 0;
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    font-size: 18px;
+    line-height: 22px;
+
+    @media (min-width: $desktop-width) {
+        padding-left: 24px;
+        font-family: $basic-font-text;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        position: relative;
+    }
+
+    &::before {
+        @media (min-width: $desktop-width) {
+            content: "";
+            position: absolute;
+            top: 2px;
+            left: 0;
+            width: 16px;
+            height: 16px;
+            background-image: url(../img/icons/icon-job.svg);
+        }
+    }
+}
+
+.last-job__info-title {
+    margin: 0;
+
+    font-size: 18px;
+    font-weight: 500;
+
+    @media (min-width: $desktop-width) {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.last-job__info-list {
+    padding: 0 0 0 25px;
+    margin: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: $pharaon-purple;
+
+    @media (min-width: $desktop-width) {
+        font-size: 14px;
+        line-height: 20px;
+
+        color: $black-howl;
+    }
+}

@@ -1,0 +1,38 @@
+.socials {
+    display: none;
+    @media (min-width: $desktop-width) {
+        display: block;
+
+        position: absolute;
+        top: 600px;
+        left: calc(50% + 240px);
+    }
+}
+.social__list {
+    width: 290px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media (min-width: $desktop-width) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.social__item {
+}
+
+.social__link {
+    width: 30px;
+    height: 30px;
+    display: block;
+}
+
+.social__link {
+    &:hover {
+        & .social__icon g {
+            opacity: 1;
+        }
+    }
+}

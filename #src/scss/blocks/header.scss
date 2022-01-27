@@ -1,0 +1,11 @@
+.header {
+    @media (min-width: $tablet-width) {
+        width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    @media (min-width: $desktop-width) {
+        width: 1056px;
+    }
+}

@@ -1,0 +1,120 @@
+.options {
+    position: absolute;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+        z-index: 4;
+    }
+
+    @media (min-width: $desktop-width) {
+    }
+}
+
+.options__list {
+    background-color: $white;
+    border-radius: 16px;
+    border: 1px solid $cold-morning;
+    box-shadow: 1px 4px 40px $matisse;
+    margin: 0;
+    padding: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+
+    z-index: 2;
+
+    @media (min-width: $desktop-width) {
+        margin-top: 60px;
+        width: 216px;
+        padding: 8px;
+
+        border-radius: 6px;
+    }
+}
+
+.options__item {
+    background-color: $white;
+    border-bottom: 1px solid $maui-mist;
+
+    @media (min-width: $desktop-width) {
+        border-bottom: none;
+        margin-bottom: 4px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.options__link {
+    display: flex;
+    align-items: center;
+
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    text-decoration: none;
+    font-family: $basic-font-text;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 24px;
+    color: $black-howl;
+
+    @media (min-width: $desktop-width) {
+        font-size: 13px;
+        line-height: 18px;
+
+        padding-top: 8px;
+        padding-bottom: 8px;
+
+        border-radius: 4px;
+    }
+
+    &:hover {
+        background-color: $grams-hair;
+    }
+}
+
+.options__icon {
+    margin-right: 12px;
+
+    @media (min-width: $desktop-width) {
+        width: 16px;
+        height: 16px;
+
+        margin-left: 8px;
+        margin-right: 8px;
+    }
+}
+
+.options__button {
+    border: 1px solid $cold-morning;
+    box-shadow: 1px 4px 40px $matisse;
+
+    margin-top: 10px;
+    color: $stay-the-night;
+    background-color: $white;
+    border-radius: 16px;
+    &:hover {
+        background-color: $cold-morning;
+    }
+
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
+}

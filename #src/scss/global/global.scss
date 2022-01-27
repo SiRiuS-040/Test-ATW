@@ -36,3 +36,52 @@
 .disabled {
     display: none;
 }
+
+.button-hider {
+    border: 0;
+    cursor: pointer;
+    color: $sanctuary-spa;
+    background-color: transparent;
+
+    font-family: $basic-font-text;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    width: 100%;
+    text-align: left;
+
+    @media (min-width: $desktop-width) {
+        font-size: 12px;
+        line-height: 14px;
+        color: $pharaon-purple;
+    }
+}
+
+.basic-button {
+    border: none;
+    padding: 10px 0;
+    background-color: $blazing-bonfire;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: $white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:hover {
+        background-color: $cheese-please;
+    }
+
+    @media (min-width: $desktop-width) {
+        padding: 11px 0;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

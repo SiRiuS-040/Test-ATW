@@ -1,0 +1,119 @@
+.overlay {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 100%;
+
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.popup-addnote {
+    position: fixed;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    padding-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    top: 150px;
+    left: 15px;
+    width: calc(100% - 24px * 2 - 15px * 2);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+
+    @media (min-width: $tablet-width) {
+        width: 442px;
+        left: calc(50% - 442px / 2);
+        border-radius: 16px;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        right: calc(50% - 18px);
+        width: 36px;
+        height: 5px;
+
+        background-color: $white;
+        border-radius: 3px;
+
+        @media (min-width: $tablet-width) {
+            display: none;
+        }
+    }
+
+    visibility: hidden;
+    opacity: 0;
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+.popup-addnote__title {
+    margin: 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid $clear-vision;
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+
+    @media (min-width: $tablet-width) {
+        border: none;
+        font-size: 18px;
+        line-height: 24px;
+    }
+}
+
+.popup-addnote__input {
+    padding-top: 16px;
+    border: none;
+    height: 122px;
+    resize: none;
+
+    font-family: $basic-font-text;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+
+    @media (min-width: $tablet-width) {
+        border-radius: 8px;
+        border: 1px solid $clear-vision;
+    }
+
+    &::placeholder {
+        @media (min-width: $tablet-width) {
+            color: $white;
+        }
+    }
+}
+.popup-addnote__controls {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+
+    @media (min-width: $tablet-width) {
+        grid-gap: 16px;
+    }
+}
+
+.popup-addnote__button--cancel {
+    color: $pharaon-purple;
+    background-color: $cold-morning;
+
+    &:hover {
+        background-color: $granitine;
+    }
+}

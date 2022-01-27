@@ -1,0 +1,67 @@
+.video-interview {
+    margin-top: 24px;
+    min-height: 40px;
+
+    box-shadow: inset 0px -1px 0px $maui-mist;
+    border-radius: 4px;
+}
+
+.video-interview__wrapper {
+    padding-left: 61px;
+
+    width: 100%;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: calc(50% - 21px);
+        left: 0;
+        width: 47px;
+        height: 44px;
+
+        background-image: url(/img/icons/icon-video-interview.svg);
+        background-size: 47px 44px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+.video-interview__title {
+    margin: 0;
+    font-family: $basic-font-title-semibold;
+    font-size: 16px;
+    line-height: 22px;
+    color: $spacescape;
+}
+.video-interview__desc {
+    margin: 4px 0 10px 0;
+
+    font-size: 12px;
+    line-height: 14px;
+    color: $pharaon-purple;
+}
+.video-interview__link {
+    text-decoration: none;
+    display: block;
+    padding-right: 54px;
+
+    cursor: pointer;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 4px;
+
+        right: calc(0%);
+        width: 42px;
+        height: 42px;
+
+        background-color: $maui-mist;
+        border-radius: 7px;
+        background-image: url(/img/icons/icon-arrow.svg);
+        background-size: 12px 12px;
+        background-repeat: no-repeat;
+        background-position: center;
+        transform: rotate(180deg);
+    }
+}
