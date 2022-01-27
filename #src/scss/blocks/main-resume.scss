@@ -17,6 +17,7 @@
 }
 
 .main-resume__salary {
+    margin: 12px 0 0 0;
     font-family: $basic-font-title-semibold;
     font-weight: 600;
     font-size: 16px;
@@ -26,8 +27,8 @@
     @media (min-width: $desktop-width) {
         margin: 0;
         position: absolute;
-        top: 115px;
-        left: calc(50% + 240px);
+        top: 123px;
+        left: calc(50% + 238px);
 
         font-family: $basic-font-title;
         font-weight: 500;
@@ -37,6 +38,7 @@
 }
 
 .main-resume__speciality {
+    margin: 12px 0 0 0;
     font-family: $basic-font-text;
     font-weight: 400;
     font-size: 18px;
@@ -52,6 +54,8 @@
     }
 }
 .main-resume__description-list {
+    margin: 6px 0 0 0;
+    padding: 0 0 0 27px;
     font-family: $basic-font-text;
     font-weight: 400;
     font-size: 16px;
@@ -59,6 +63,7 @@
 
     @media (min-width: $desktop-width) {
         margin: 0;
+        padding: 0 0 0 23px;
         font-size: 14px;
         line-height: 20px;
     }

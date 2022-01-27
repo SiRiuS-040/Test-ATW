@@ -12,9 +12,9 @@
     @media (min-width: $desktop-width) {
         position: absolute;
         height: 24px;
-
-        left: 648px;
-        left: calc(50% + 74px);
+        padding-right: 0;
+        top: 123px;
+        left: calc(50% + 80px);
         width: 104px;
         z-index: 0;
     }
@@ -165,6 +165,10 @@
         background-image: url(/img/icons/icon-print.svg);
         background-size: 24px 24px;
         background-repeat: no-repeat;
+    }
+
+    @media (min-width: $desktop-width) {
+        margin-right: 0;
     }
 }
 

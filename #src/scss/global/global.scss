@@ -38,6 +38,7 @@
 }
 
 .button-hider {
+    padding: 0;
     border: 0;
     cursor: pointer;
     color: $sanctuary-spa;
@@ -80,7 +81,8 @@
     }
 
     @media (min-width: $desktop-width) {
-        padding: 11px 0;
+        border-radius: 6px;
+        padding: 8px 0;
         font-size: 14px;
         line-height: 20px;
     }

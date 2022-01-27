@@ -4,10 +4,20 @@
 
     box-shadow: inset 0px -1px 0px $maui-mist;
     border-radius: 4px;
+
+    @media (min-width: $desktop-width) {
+        margin-top: 16px;
+        padding: 10px 0;
+        box-shadow: none;
+
+        border: 1px solid #e7eef6;
+        box-sizing: border-box;
+        border-radius: 8px;
+    }
 }
 
 .video-interview__wrapper {
-    padding-left: 61px;
+    padding-left: 72px;
 
     width: 100%;
     position: relative;
@@ -15,8 +25,8 @@
     &::before {
         content: "";
         position: absolute;
-        top: calc(50% - 21px);
-        left: 0;
+        top: calc(50% - 27px);
+        left: 8px;
         width: 47px;
         height: 44px;
 
@@ -24,6 +34,10 @@
         background-size: 47px 44px;
         background-repeat: no-repeat;
         background-position: center;
+
+        @media (min-width: $desktop-width) {
+            top: calc(50% - 23px);
+        }
     }
 }
 .video-interview__title {
@@ -39,6 +53,10 @@
     font-size: 12px;
     line-height: 14px;
     color: $pharaon-purple;
+
+    @media (min-width: $desktop-width) {
+        margin-bottom: 0;
+    }
 }
 .video-interview__link {
     text-decoration: none;
@@ -46,6 +64,10 @@
     padding-right: 54px;
 
     cursor: pointer;
+
+    @media (min-width: $desktop-width) {
+        padding-right: 0;
+    }
 
     &::before {
         content: "";
@@ -63,5 +85,9 @@
         background-repeat: no-repeat;
         background-position: center;
         transform: rotate(180deg);
+
+        @media (min-width: $desktop-width) {
+            display: none;
+        }
     }
 }

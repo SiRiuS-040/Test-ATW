@@ -4,11 +4,9 @@
 
     @media (min-width: $desktop-width) {
         position: absolute;
-        top: 320px;
-        left: calc(50% + 240px);
-
+        top: 325px;
+        left: calc(50% + 238px);
         width: 290px;
-
         border-radius: 10px;
         border: 1px solid $clear-vision;
 
@@ -30,6 +28,7 @@
 
     @media (min-width: $desktop-width) {
         position: relative;
+        padding-left: 20px;
     }
 }
 
@@ -45,8 +44,8 @@
         align-items: center;
         position: absolute;
 
-        top: 10px;
-        right: 20px;
+        top: 8px;
+        right: 10px;
     }
 }
 
@@ -74,12 +73,44 @@
 
     @media (min-width: $desktop-width) {
         display: block;
+        margin-top: 0px;
+
+        padding: 0 10px;
     }
 
     &--closed {
         @media (min-width: $desktop-width) {
             display: none;
         }
+    }
+}
+
+// тест меню анимации
+
+// .response-history__list {
+//     &:hover {
+//         @media (min-width: $desktop-width) {
+//             transform: scaleY(1);
+
+//             transition: 0.6s ease-in-out;
+//             display: none;
+//         }
+//     }
+// }
+
+// transform: scaleY(1);
+
+// transition: 0.6s ease-in-out;
+
+// transform: perspective(600px) rotateX(-90deg);
+// transform-origin: 0% 0%;
+// transition: 0.6s ease-in-out;
+
+//
+
+.response-history__item {
+    @media (min-width: $desktop-width) {
+        padding: 10px 0;
     }
 }
 
@@ -103,11 +134,11 @@
 .response__date {
     margin: 0;
 
-    width: 60px;
+    width: 62px;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
 
     font-family: $basic-font-title;
     font-weight: 500;
@@ -118,6 +149,12 @@
 
     position: relative;
 
+    @media (min-width: $desktop-width) {
+        text-align: center;
+
+        width: 66px;
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -125,10 +162,18 @@
         height: 100%;
 
         top: 0;
-        right: -5px;
+        right: 0px;
 
         background-color: $black;
         border-radius: 50px;
+    }
+}
+
+.response__icon {
+    margin-left: 14px;
+
+    @media (min-width: $desktop-width) {
+        margin-left: 20px;
     }
 }
 
@@ -152,9 +197,10 @@
 
 .response__type {
     margin: 0;
-    padding: 15px 0 15px 20px;
+    padding: 13px 0 15px 10px;
 
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
 
     font-family: $basic-font-text;
@@ -163,11 +209,22 @@
     line-height: 14px;
 
     color: $nocturnal;
+
+    @media (min-width: $desktop-width) {
+        padding: 0 0 0 10px;
+        font-size: 12px;
+    }
 }
+
 .response__candidate-position {
+    margin-top: 4px;
     font-family: $basic-font-title;
     font-weight: 500;
     font-size: 17px;
     line-height: 20px;
     color: $gluon-grey;
+
+    @media (min-width: $desktop-width) {
+        font-size: 14px;
+    }
 }

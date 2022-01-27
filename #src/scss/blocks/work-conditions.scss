@@ -1,15 +1,11 @@
 .work-conditions {
     list-style: none;
-    padding: 0;
-    margin: 0;
-
-    @media (min-width: $desktop-width) {
-        margin-top: 16px;
-    }
 }
 
 .work-conditions__item {
+    margin-top: 16px;
     @media (min-width: $desktop-width) {
+        margin-top: 8px;
         display: flex;
         justify-content: flex-start;
         align-items: center;
@@ -18,7 +14,6 @@
 
 .work-conditions__title {
     margin: 0;
-    margin-top: 16px;
 
     font-family: $basic-font-text;
     font-weight: 400;
@@ -34,9 +29,10 @@
 }
 
 .work-conditions__desc {
-    margin: 0;
+    margin: 4px 0 0 0;
 
     @media (min-width: $desktop-width) {
+        margin: 0 0 0 0;
         font-size: 14px;
         line-height: 20px;
     }
