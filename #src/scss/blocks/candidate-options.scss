@@ -1,0 +1,86 @@
+.candidate-options {
+    width: 100%;
+    padding: 15px 0;
+    position: relative;
+
+    @media (min-width: $desktop-width) {
+        grid-area: d;
+        padding: 0;
+        width: 290px;
+    }
+}
+
+.candidate-options__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: -1;
+
+    @media (min-width: $desktop-width) {
+        padding: 0;
+    }
+}
+
+.candidate-options__button-icon {
+    margin-left: 15px;
+}
+
+.candidate-options__button-favorites {
+    width: 42px;
+    height: 42px;
+    border: none;
+    background-color: transparent;
+
+    cursor: pointer;
+    margin-left: 16px;
+    margin-right: 0px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 42px;
+        height: 42px;
+
+        background-color: $maui-mist;
+        border-radius: 50px;
+        background-image: url(../img/icons/icon-favorite.svg);
+        background-size: 22px 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    &:hover {
+        &::before {
+            background-color: $calypso-coral;
+            background-image: url(../img/icons/icon-favorite-active.svg);
+        }
+    }
+}
+.candidate-options__call {
+    width: 42px;
+    height: 42px;
+
+    cursor: pointer;
+    margin-left: 16px;
+    margin-right: 0px;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 2px;
+        right: 0;
+        width: 42px;
+        height: 42px;
+
+        background-color: $maui-mist;
+        border-radius: 50px;
+        background-image: url(/img/icons/icon-call.svg);
+        background-size: 30px 34px;
+        background-repeat: no-repeat;
+        background-position: top center;
+    }
+}

@@ -1,0 +1,65 @@
+.main-resume {
+    @media (min-width: $desktop-width) {
+        color: $black-howl;
+    }
+}
+
+.main-resume__position {
+    margin: 0;
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+    }
+}
+
+.main-resume__salary {
+    font-family: $basic-font-title-semibold;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: $gluon-grey;
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+        position: absolute;
+        top: 115px;
+        left: calc(50% + 240px);
+
+        font-family: $basic-font-title;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 36px;
+    }
+}
+
+.main-resume__speciality {
+    font-family: $basic-font-text;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+
+    @media (min-width: $desktop-width) {
+        margin: 8px 0 6px 0;
+
+        font-family: $basic-font-title;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+.main-resume__description-list {
+    font-family: $basic-font-text;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+        font-size: 14px;
+        line-height: 20px;
+    }
+}

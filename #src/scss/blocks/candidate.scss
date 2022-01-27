@@ -1,0 +1,133 @@
+.candidate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    @media (min-width: $desktop-width) {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        height: 100px;
+    }
+}
+
+.candidate__wrapper {
+    text-align: center;
+
+    @media (min-width: $desktop-width) {
+        margin-left: 19px;
+        text-align: left;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+}
+
+.candidate__avatar {
+    margin-top: 10px;
+
+    width: 100px;
+    height: 100px;
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+    }
+}
+
+.candidate__avatar-indicator {
+    position: absolute;
+    top: 90px;
+    left: calc(50% + 26px);
+
+    @media (min-width: $desktop-width) {
+        top: 80px;
+        left: calc(50% - 277px);
+    }
+
+    &--online {
+        fill: $drop-green;
+    }
+
+    &--offline {
+        fill: $red;
+    }
+}
+
+.candidate__name {
+    margin: 10px 0 0 0;
+
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 24px;
+    color: $black-howl;
+
+    @media (min-width: $desktop-width) {
+        margin: 10px 0 8px 0;
+    }
+}
+
+.candidate__info {
+    margin: 6px 0 0 0;
+
+    font-size: 15px;
+    line-height: 20px;
+    color: $gluon-grey;
+
+    @media (min-width: $desktop-width) {
+        padding-left: 20px;
+        margin: 0;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+
+            top: 2px;
+            left: 0px;
+            background-image: url(../img/icons/icon-sex.svg);
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.candidate__last-update {
+    margin: 6px 0 10px 0;
+
+    font-size: 14px;
+    line-height: 20px;
+    color: $hamiltpn-blue;
+
+    & span {
+        color: $linderhof-garden;
+    }
+
+    @media (min-width: $desktop-width) {
+        position: relative;
+        margin: auto 0 10px 0;
+        padding-left: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+
+            top: 2px;
+            left: 0px;
+            background-image: url(../img/icons/icon-clock.svg);
+            background-size: 16px 16px;
+            background-repeat: no-repeat;
+        }
+    }
+}
