@@ -7,7 +7,7 @@
             <h2 class="hero__candidate-name">Комкова Екатерина</h2>
             <p class="header__candidate-position">Художник-костюмер</p>
         </div>
-        <a href="#addnote" class="hero__button hero__button--addnote"></a>
+        <a href="#addnote" class="hero__button hero__button--addnote open-note--main"></a>
         <!-- <button class="hero__button hero__button--addnote"></button> -->
         <a href="" download="#" class="hero__button hero__button--download-resume"></a>
     </section>
@@ -33,7 +33,7 @@
         <section class="resume__candidate-options candidate-options">
             <button class="resume__candidate-aditionals-options"></button>
             <div class="candidate-options__wrapper">
-                <button class="basic-button candidate-options__button">Предложить вакансию
+                <button class="basic-button candidate-options__button options-button--main">Предложить вакансию
                     <svg class="candidate-options__button-icon disabled" width="19" height="18" viewBox="0 0 19 18"
                         fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M15.5 4.5L7.25 12.75L3.5 9" stroke="white" stroke-width="2" stroke-linecap="round"
@@ -156,7 +156,7 @@
                             Выход на работу</a>
                     </li>
                 </ul>
-                <button class="basic-button options__button">Отмена</button>
+                <button class="basic-button options__button-close">Отмена</button>
             </div>
         </section>
         <section class="resume__main-section main-resume">
@@ -533,9 +533,9 @@
         </ul>
     </section>
 
-    <section class="hero--bottom">
+    <div class="hero--bottom">
         <div class="candidate-options__wrapper hero--bottom__wrapper ">
-            <button class="basic-button candidate-options__button">Предложить вакансию
+            <button class="basic-button candidate-options__button options-button--bottom">Предложить вакансию
                 <svg class="candidate-options__button-icon disabled" width="19" height="18" viewBox="0 0 19 18"
                     fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.5 4.5L7.25 12.75L3.5 9" stroke="white" stroke-width="2" stroke-linecap="round"
@@ -545,21 +545,17 @@
             <button class="candidate-options__button-favorites" aria-label="В избранное"></button>
             <a href="tel:+1234567890" class="candidate-options__call disabled" aria-label="Позвонить"></a>
         </div>
+    </div>
 
+    <div class="popup overlay overlay"> </div>
 
-
-
-    </section>
-
-    <section class="popup overlay overlay --active">
-        <div class="popup__addnote popup-addnote popup-addnote --active ">
-            <h2 class="popup-addnote__title">Ваша заметка о кандидате</h2>
-            <textarea placeholder="Введите текст" class="popup-addnote__input"></textarea>
-            <div class="popup-addnote__controls">
-                <button class="basic-button popup-addnote__button popup-addnote__button--cancel">Отмена</button>
-                <button class="basic-button popup-addnote__button popup-addnote__button--save">Сохранить</button>
-            </div>
+    <div class="popup__addnote popup-addnote">
+        <h2 class="popup-addnote__title">Ваша заметка о кандидате</h2>
+        <textarea placeholder="Введите текст" class="popup-addnote__input"></textarea>
+        <div class="popup-addnote__controls">
+            <button class="basic-button popup-addnote__button popup-addnote__button--cancel">Отмена</button>
+            <button class="basic-button popup-addnote__button popup-addnote__button--save">Сохранить</button>
         </div>
-    </section>
+    </div>
 
 </main>

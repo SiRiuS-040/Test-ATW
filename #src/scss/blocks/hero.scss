@@ -16,7 +16,7 @@
         top: 123px;
         left: calc(50% + 80px);
         width: 104px;
-        z-index: 0;
+        z-index: 2;
     }
 }
 
@@ -76,7 +76,6 @@
         left: 0px;
         width: 40px;
         height: 40px;
-        background-color: red;
         border-radius: 50px;
         background-image: url("../img/candidate-avatar.jpg");
         background-size: 40px 40px;
