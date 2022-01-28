@@ -12,6 +12,10 @@
 
     z-index: 5;
 
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
+
     &--active {
         visibility: visible;
         opacity: 1;
@@ -39,6 +43,10 @@
         width: 442px;
         left: calc(50% - 442px / 2);
         border-radius: 16px;
+    }
+
+    @media (min-width: $desktop-width) {
+        box-shadow: 1px 4px 40px $matisse;
     }
 
     &::before {

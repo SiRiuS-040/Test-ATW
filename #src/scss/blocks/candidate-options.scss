@@ -22,7 +22,18 @@
 }
 
 .candidate-options__button-icon {
-    margin-left: 15px;
+    margin-left: 12px;
+
+    visibility: hidden;
+    opacity: 0;
+    width: 0;
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+
+        width: 19px;
+    }
 }
 
 .candidate-options__button-favorites {
@@ -73,6 +84,7 @@
     @media (min-width: $desktop-width) {
     }
 }
+
 .candidate-options__call {
     width: 42px;
     height: 42px;

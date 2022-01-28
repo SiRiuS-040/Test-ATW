@@ -63,6 +63,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    transition: opacity 500ms;
 
     @media (min-width: $tablet-width) {
         margin-top: 16px;
@@ -74,39 +75,25 @@
     @media (min-width: $desktop-width) {
         display: block;
         margin-top: 0px;
+        height: 195px;
 
+        overflow: auto;
         padding: 0 10px;
     }
 
     &--closed {
         @media (min-width: $desktop-width) {
-            display: none;
+            transform: perspective(600px) rotateX(-90deg);
+            transform-origin: 0% 0%;
+            transition: 0.6s ease-in-out;
+
+            visibility: hidden;
+            height: 0;
+            overflow: hidden;
+            opacity: 0;
         }
     }
 }
-
-// тест меню анимации
-
-// .response-history__list {
-//     &:hover {
-//         @media (min-width: $desktop-width) {
-//             transform: scaleY(1);
-
-//             transition: 0.6s ease-in-out;
-//             display: none;
-//         }
-//     }
-// }
-
-// transform: scaleY(1);
-
-// transition: 0.6s ease-in-out;
-
-// transform: perspective(600px) rotateX(-90deg);
-// transform-origin: 0% 0%;
-// transition: 0.6s ease-in-out;
-
-//
 
 .response-history__item {
     @media (min-width: $desktop-width) {
@@ -123,12 +110,7 @@
     align-items: center;
 
     @media (min-width: $tablet-width) {
-        // width: 290px;
         margin: 0;
-    }
-
-    @media (min-width: $desktop-width) {
-        // width: 290px;
     }
 }
 .response__date {
@@ -144,14 +126,11 @@
     font-weight: 500;
     font-size: 13px;
     line-height: 20px;
-
     color: $gluon-grey;
-
     position: relative;
 
     @media (min-width: $desktop-width) {
         text-align: center;
-
         width: 66px;
     }
 

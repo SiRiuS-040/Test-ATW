@@ -30,15 +30,12 @@
                 <p class="candidate__last-update">Обновлено <span>4 мая 2021 в 7:39</span></p>
             </div>
         </section>
-        <section class="resume__candidate-options candidate-options">
+        <section class="resume__candidate-options candidate-options noPrint">
             <button class="resume__candidate-aditionals-options"></button>
             <div class="candidate-options__wrapper">
-                <button class="basic-button candidate-options__button options-button--main">Предложить вакансию
-                    <svg class="candidate-options__button-icon disabled" width="19" height="18" viewBox="0 0 19 18"
-                        fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M15.5 4.5L7.25 12.75L3.5 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
+                <button
+                    class="basic-button candidate-options__button options-button options-button --active options-button--main">Предложить
+                    вакансию
                 </button>
                 <button class="candidate-options__button-favorites" aria-label="В избранное"></button>
                 <a href="tel:+1234567890" class="candidate-options__call disabled" aria-label="Позвонить"></a>
@@ -51,7 +48,7 @@
                     </a>
                 </div>
             </div>
-            <div class="candidate-options__menu options options --active">
+            <div class="candidate-options__menu options">
                 <ul class="options__list">
                     <li class="options__item">
                         <a href="#" class="options__link options__link--think">
@@ -313,7 +310,7 @@
                     </div>
                 </div>
             </div>
-            <section class="resume__section portfolio">
+            <section class="resume__section portfolio noPrint">
                 <h2 class="resume__section-title">Портфолио</h2>
                 <div class="resume__slider showcase-carousel">
                     <div class="swiper-wrapper">
@@ -343,7 +340,7 @@
             </section>
         </section>
     </section>
-    <section class="response-history container">
+    <section class="response-history container noPrint">
         <h2 class="response-history__title">История откликов</h2>
         <a href="#" class="response-history__button">
             <svg width="12" height="12" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -354,7 +351,7 @@
             </svg>
         </a>
         <div class="response-history__wrapper">
-            <ul class="response-history__list response-history__list --closed">
+            <ul class="response-history__list response-history__list">
                 <li class="response-history__item response response--video">
                     <a href="#" class="response__link">
                         <p class="response__date">
@@ -432,7 +429,7 @@
         </div>
     </section>
 
-    <section class="socials">
+    <section class="socials noPrint">
         <ul class="social__list">
             <li class="social__item">
                 <a href="" class="social__link">
@@ -533,21 +530,25 @@
         </ul>
     </section>
 
-    <div class="hero--bottom">
+    <div class="hero--bottom noPrint">
         <div class="candidate-options__wrapper hero--bottom__wrapper ">
-            <button class="basic-button candidate-options__button options-button--bottom">Предложить вакансию
-                <svg class="candidate-options__button-icon disabled" width="19" height="18" viewBox="0 0 19 18"
-                    fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M15.5 4.5L7.25 12.75L3.5 9" stroke="white" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
+            <button class="basic-button candidate-options__button options-button options-button--bottom">Предложить
+                вакансию
+
             </button>
+
+            <svg class="candidate-options__button-icon candidate-options__button-icon --active" width="19" height="18"
+                viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M15.5 4.5L7.25 12.75L3.5 9" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+
             <button class="candidate-options__button-favorites" aria-label="В избранное"></button>
             <a href="tel:+1234567890" class="candidate-options__call disabled" aria-label="Позвонить"></a>
         </div>
     </div>
 
-    <div class="popup overlay overlay"> </div>
+    <div class="popup overlay"> </div>
 
     <div class="popup__addnote popup-addnote">
         <h2 class="popup-addnote__title">Ваша заметка о кандидате</h2>
