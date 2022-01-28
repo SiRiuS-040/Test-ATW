@@ -50,11 +50,15 @@
 }
 
 .response-history__icon {
+    transition: 0.6s ease-in-out;
+    
     @media (min-width: $desktop-width) {
         transform: rotate(90deg);
 
         &--closed {
             transform: rotate(-90deg);
+
+            transition: 0.6s ease-in-out;
         }
     }
 }

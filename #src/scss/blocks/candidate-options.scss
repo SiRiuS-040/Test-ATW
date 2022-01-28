@@ -77,11 +77,13 @@
     &:hover {
         &::before {
             background-color: $calypso-coral;
-            background-image: url(../img/icons/icon-favorite-active.svg);
         }
     }
 
-    @media (min-width: $desktop-width) {
+    &--active {
+        &::before {
+            background-image: url(../img/icons/icon-favorite-active.svg);
+        }
     }
 }
 
@@ -104,7 +106,7 @@
 
         background-color: $maui-mist;
         border-radius: 50px;
-        background-image: url(/img/icons/icon-call.svg);
+        background-image: url(../img/icons/icon-call.svg);
         background-size: 30px 34px;
         background-repeat: no-repeat;
         background-position: top center;

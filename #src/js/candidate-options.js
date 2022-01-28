@@ -36,7 +36,7 @@ const sendOfferOption = () => {
 
 const toggleMenu = function () {
     optionsMenu.classList.toggle('options--active');
-    overlay.classList.add('overlay--active');
+    overlay.classList.toggle('overlay--active');
 };
 
 const showCloseCandidateOptions = () => {
