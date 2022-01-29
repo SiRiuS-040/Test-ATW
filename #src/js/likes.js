@@ -12,7 +12,12 @@ const toggleLikes = function () {
     })
 };
 
-buttonFavorite.onclick = function () {
-    toggleLikes();
-};
+
+buttonsFavoriteArray.forEach(item => {
+    item.addEventListener('click', event => {
+        toggleLikes();
+    })
+})
+
+
 
