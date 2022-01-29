@@ -1,5 +1,7 @@
 .hero {
     height: 48px;
+
+    min-height: 48px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
@@ -13,7 +15,7 @@
         position: absolute;
         height: 24px;
         padding-right: 0;
-        top: 123px;
+        top: 110px;
         left: calc(50% + 80px);
         width: 104px;
         z-index: 2;

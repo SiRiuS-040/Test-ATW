@@ -31,22 +31,19 @@
     @media (min-width: $desktop-width) {
         display: block;
         position: absolute;
+
+        top: -60px;
+        right: 0px;
+
         margin-left: auto;
         margin-bottom: 24px;
         background-color: transparent;
-        cursor: pointer;
 
-        &::before {
-            content: "";
-            position: absolute;
-            top: -60px;
-            right: -272px;
-            width: 18px;
-            height: 36px;
-            background-image: url(../img/icons/icon-ads-options.svg);
-            background-size: 18px 36px;
-            background-repeat: no-repeat;
-        }
+        background-image: url(../img/icons/icon-ads-options.svg);
+        background-size: 18px 36px;
+        background-repeat: no-repeat;
+
+        cursor: pointer;
     }
 }
 
@@ -117,7 +114,4 @@
         width: 100%;
         border-bottom: 1px solid $icelandic-winds;
     }
-}
-
-.resume__slider {
 }
