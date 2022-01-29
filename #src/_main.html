@@ -30,7 +30,7 @@
             </div>
         </section>
         <section class="resume__candidate-options candidate-options noPrint">
-            <button class="resume__candidate-aditionals-options"></button>
+            <button class="resume__candidate-aditionals-options" aria-label="Дополнительные опции"></button>
             <div class="candidate-options__wrapper">
                 <button
                     class="basic-button candidate-options__button options-button options-button --active options-button--main">Предложить
@@ -152,7 +152,8 @@
                             Выход на работу</a>
                     </li>
                 </ul>
-                <button class="basic-button options__button-close">Отмена</button>
+                <button class="basic-button options__button-close"
+                    aria-label="Закрыть список предложений">Отмена</button>
             </div>
         </section>
         <section class="resume__main-section main-resume">
@@ -229,7 +230,8 @@
                             </li>
 
                         </ul>
-                        <button class="button-hider button-hider--duties">Скрыть</button>
+                        <button class="button-hider button-hider--duties"
+                            aria-label="Скрыть или показать список">Скрыть</button>
                     </div>
                     <div class="last-job__wrapper">
                         <h4 class="last-job__info-title last-job__info-title--thin">Достижения</h4>
@@ -267,7 +269,9 @@
                                 Сборка дистрибутивов обновленний ПО
                             </li>
                         </ul>
-                        <button class="button-hider button-hider--achievements">Показать полностью...</button>
+                        <button class="button-hider button-hider--achievements"
+                            aria-label="Скрыть или показать список">>Показать
+                            полностью...</button>
                     </div>
                     <div class="last-job__wrapper">
                         <h4 class="last-job__info-title last-job__info-title--thin">Причины ухода</h4>
@@ -305,14 +309,16 @@
                                 Сборка дистрибутивов обновленний ПО
                             </li>
                         </ul>
-                        <button class="button-hider button-hider--reasons">Показать полностью...</button>
+                        <button class="button-hider button-hider--reasons"
+                            aria-label="Скрыть или показать список">>Показать полностью...</button>
                     </div>
                 </div>
             </div>
             <section class="resume__section portfolio ">
                 <h2 class=" resume__section-title portfolio__title">Портфолио</h2>
                 <div id="carousel" class="portfolio__carousel carousel">
-                    <button class="carousel__control carousel__control--prev slide--prev"> </button>
+                    <button class="carousel__control carousel__control--prev slide--prev"
+                        aria-label="Предыдущее изобраажение"></button>> </button>
                     <div class="carousel__gallery gallery">
                         <ul class="gallery__list">
                             <li class="gallery__item">
@@ -338,7 +344,8 @@
                             </li>
                         </ul>
                     </div>
-                    <button class="carousel__control carousel__control--next slide--next"> </button>
+                    <button class="carousel__control carousel__control--next slide--next"
+                        aria-label="Следующее изобраажение"> </button>
                 </div>
 
 
@@ -347,7 +354,7 @@
     </section>
     <section class="response-history container noPrint">
         <h2 class="response-history__title">История откликов</h2>
-        <a href="#" class="response-history__button">
+        <a href="#" class="response-history__button" aria-label="Открыть или закрыть список истории откликов">
             <svg width="12" height="12" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg"
                 class="response-history__icon">
                 <path
@@ -547,7 +554,7 @@
                     stroke-linejoin="round" />
             </svg>
 
-            <button class="candidate-options__button-favorites" aria-label="В избранное"></button>
+            <button class="candidate-options__button-favorites" aria-label="Добавить в избранное"></button>
             <a href="tel:+1234567890" class="candidate-options__call disabled" aria-label="Позвонить"></a>
         </div>
     </div>
@@ -556,22 +563,26 @@
         <h2 class="popup-addnote__title">Ваша заметка о кандидате</h2>
         <textarea placeholder="Введите текст" class="popup-addnote__input"></textarea>
         <div class="popup-addnote__controls">
-            <button class="basic-button popup-addnote__button popup-addnote__button--cancel">Отмена</button>
-            <button class="basic-button popup-addnote__button popup-addnote__button--save">Сохранить</button>
+            <button class="basic-button popup-addnote__button popup-addnote__button--cancel"
+                aria-label="Закрыть окно заметки">Отмена</button>
+            <button class="basic-button popup-addnote__button popup-addnote__button--save"
+                aria-label="Сохранить заметку">Сохранить</button>
         </div>
     </div>
 
     <div class="portfolio__popup picture-popup picture-popup --active">
 
         <div class="picture-popup__nav">
-            <button class="picture-popup__button-close"></button>
+            <button class="picture-popup__button-close" aria-label="Закрыть изображение"></button>
             <p class="picture-popup__counter"> 4 / 7</p>
         </div>
-        <button class="picture-popup__control picture-popup__control--prev slide--prev"> </button>
+        <button class="picture-popup__control picture-popup__control--prev slide--prev"
+            aria-label="Предыдущее изображение"> </button>
         <div class="picture-popup__image-wrapper">
             <img id='myImage' src="./img/slide-4x4.png" alt="" class="picture-popup__image" width="375">
         </div>
-        <button class="picture-popup__control picture-popup__control--next slide--next"> </button>
+        <button class="picture-popup__control picture-popup__control--next slide--next"
+            aria-label="Следующее изображение"> </button>
         <div class="picture-popup__info">
             <p class="picture-popup__price">500 P</p>
             <p class="picture-popup__title">Наклейки детские</p>
