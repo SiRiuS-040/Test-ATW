@@ -1,3 +1,5 @@
+// Карусель
+
 const width = 157; // ширина картинки
 const count = 1; // видимое количество изображений
 
@@ -23,8 +25,8 @@ carousel.querySelector('.slide--next').onclick = function () {
 };
 
 
+// Окно просмотра изображения
 
-// const popupSliderOpen = document.querySelector('.picture-popup');
 
 const popupSlider = document.querySelector('.picture-popup');
 const popupSliderClose = document.querySelector('.picture-popup__button-close');
@@ -67,3 +69,5 @@ popupSliderOpen.forEach(item => {
         showPopupSlide();
     })
 })
+
+
