@@ -68,6 +68,10 @@
         background-repeat: no-repeat;
         background-position: center;
 
+        transform: perspective(600px) rotateY(-180deg);
+        transform-origin: 50% 50%;
+        transition: 0.6s ease-in-out;
+
         @media (min-width: $desktop-width) {
             width: 36px;
             height: 36px;
@@ -83,6 +87,10 @@
     &--active {
         &::before {
             background-image: url(../img/icons/icon-favorite-active.svg);
+
+            transform: perspective(600px) rotateY(180deg);
+            transform-origin: 50% 50%;
+            transition: 0.6s ease-in-out;
         }
     }
 }
