@@ -1,5 +1,5 @@
 const buttonsFavoriteArray = document.querySelectorAll('.candidate-options__button-favorites');
-const buttonFavorite = document.querySelector('.candidate-options__button-favorites');
+// const buttonFavorite = document.querySelector('.candidate-options__button-favorites');
 
 const toggleLikes = function () {
     buttonsFavoriteArray.forEach((element) => {
@@ -12,12 +12,9 @@ const toggleLikes = function () {
     })
 };
 
-
 buttonsFavoriteArray.forEach(item => {
     item.addEventListener('click', event => {
         toggleLikes();
     })
 })
-
-
 

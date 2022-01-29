@@ -310,38 +310,55 @@
                     </div>
                 </div>
             </div>
-            <section class="resume__section portfolio noPrint">
-                <h2 class="resume__section-title">Портфолио</h2>
-                <div id="carousel" class="carousel">
-                    <button class="carousel__control carousel__control--prev arrow prev"> </button>
+            <section class="resume__section portfolio ">
+                <h2 class=" resume__section-title portfolio__title">Портфолио</h2>
+                <div id="carousel" class="portfolio__carousel carousel">
+                    <button class="carousel__control carousel__control--prev slide--prev"> </button>
                     <div class="carousel__gallery gallery">
                         <ul class="gallery__list">
                             <li class="gallery__item">
-                                <img src="../img/slide-1.jpg" alt="слайд 1" class="gallery__image">
+                                <img src="./img/slide-1x4.png" alt="слайд 1" class="gallery__image" width="147">
                             </li>
                             <li class="gallery__item">
-                                <img src="../img/slide-2.jpg" alt="слайд 2" class="gallery__image">
+                                <img src="./img/slide-2x4.png" alt="слайд 2" class="gallery__image" width="147">
                             </li>
                             <li class="gallery__item">
-                                <img src="../img/slide-3.jpg" alt="слайд 3" class="gallery__image">
+                                <img src="./img/slide-3x4.png" alt="слайд 3" class="gallery__image" width="147">
                             </li>
                             <li class="gallery__item">
-                                <img src="../img/slide-4.jpg" alt="слайд 4" class="galleryr__image">
+                                <img src="./img/slide-4x4.png" alt="слайд 4" class="galleryr__image" width="147">
                             </li>
                             <li class="gallery__item">
-                                <img src="../img/slide-5.jpg" alt="слайд 5" class="gallery__image">
+                                <img src="./img/slide-5x4.png" alt="слайд 5" class="gallery__image" width="147">
                             </li>
                             <li class="gallery__item">
-                                <img src="../img/slide-6.jpg" alt="слайд 6" class="gallery__image">
+                                <img src="./img/slide-6x4.png" alt="слайд 6" class="gallery__image" width="147">
                             </li>
                             <li class="gallery__item">
-                                <img src="../img/slide-7.jpg" alt="слайд 7" class="gallery__image">
+                                <img src="./img/slide-7x4.png" alt="слайд 7" class="gallery__image" width="147">
                             </li>
                         </ul>
                     </div>
-                    <button class="carousel__control carousel__control--next arrow next">
+                    <button class="carousel__control carousel__control--next slide--next"> </button>
+                </div>
 
-                    </button>
+                <div class="portfolio__popup picture-popup overlay---active">
+                    <div class="picture-popup__wrapper">
+                        <div class="picture-popup__nav">
+                            <button class="picture-popup__button-close"></button>
+                            <p class="picture-popup__counter"> 4 / 7</p>
+                        </div>
+                        <button class="picture-popup__control picture-popup__control--prev slide--prev"> </button>
+                        <div class="picture-popup__image-wrapper">
+                            <img id='myImage' src="./img/slide-4x4.png" alt="" class="picture-popup__image" width="375">
+                        </div>
+                        <button class="picture-popup__control picture-popup__control--next slide--next"> </button>
+                        <div class="picture-popup__info">
+                            <p class="picture-popup__price">500 P</p>
+                            <p class="picture-popup__title">Наклейки детские</p>
+                            <p class="picture-popup__desc">Наклейки детские</p>
+                        </div>
+                    </div>
                 </div>
             </section>
         </section>
