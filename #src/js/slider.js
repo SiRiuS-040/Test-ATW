@@ -21,25 +21,3 @@ carousel.querySelector('.slide--next').onclick = function () {
     position = Math.max(position, -width * (listElems.length - count));
     list.style.marginLeft = position + 'px';
 };
-
-
-// const imageArray = document.querySelectorAll('.gallery__image');
-// let imagePopup = document.getElementsByClassName('.picture-popup__image');
-
-
-// document.getElementById("myImage").src = "img/slide-7x4.png";
-
-// // imagePopup.src = './img/slide-7x4.png';
-
-// // imagePopup = imageArray[1];
-
-// console.log(imagePopup);
-
-// // imagePopup = imageArray[3];
-
-// // console.log(imagePopup);
-
-// // console.log(imageArray[3]);
-// // console.log(imagePopup);
-
-// // imagePopup.src = "./img/slide-7x4.png";

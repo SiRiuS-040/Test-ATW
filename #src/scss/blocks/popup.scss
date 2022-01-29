@@ -130,3 +130,225 @@
         background-color: $granitine;
     }
 }
+
+// Окно изображения
+
+.picture-popup {
+    color: $white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+
+    visibility: hidden;
+    opacity: 0;
+
+    width: auto;
+    height: 667px;
+    background-color: $gluon-grey-075;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &--active {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    @media (min-width: $tablet-width) {
+        width: 500px;
+        top: 100px;
+        left: calc(50% - 500px / 2);
+    }
+
+    @media (min-width: $desktop-width) {
+        left: calc(50% - 666px / 2);
+        top: 300px;
+
+        width: 666px;
+        height: 453px;
+
+        color: $black-howl;
+
+        background-color: $white;
+        box-shadow: 1px 4px 40px $matisse;
+        border-radius: 16px;
+
+        border: 2px solid $white;
+    }
+}
+
+.picture-popup__nav {
+    display: flex;
+    align-items: center;
+}
+
+.picture-popup__button-close {
+    align-items: center;
+    margin-top: 3px;
+    margin-left: 10px;
+    margin-bottom: 3px;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+
+    background-image: url(../img/icons/icon-close.svg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @media (min-width: $desktop-width) {
+        margin: 0;
+        padding: 0;
+        width: 24px;
+        height: 24px;
+
+        background-image: url(../img/icons/icon-close-black.svg);
+        background-size: 18px 18px;
+
+        position: absolute;
+        top: 0;
+        right: -36px;
+    }
+}
+
+.picture-popup__counter {
+    margin: 0;
+
+    margin-left: calc(50% - 119px / 2);
+    margin-right: auto;
+    font-family: $basic-font-title-semibold;
+    font-size: 18px;
+    line-height: 22px;
+
+    @media (min-width: $desktop-width) {
+        display: none;
+    }
+}
+
+.picture-popup__image-wrapper {
+    width: 100%;
+    height: 549px;
+    object-fit: contain;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+
+    @media (min-width: $desktop-width) {
+        // width: inherit;
+        object-fit: contain;
+    }
+}
+
+.picture-popup__image {
+    width: inherit;
+
+    @media (min-width: $desktop-width) {
+        width: 666px;
+    }
+}
+
+.picture-popup__info {
+    margin: 0;
+    padding: 10px;
+
+    @media (min-width: $desktop-width) {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        padding: 20px;
+    }
+}
+
+.picture-popup__price {
+    margin: 0;
+    font-family: $basic-font-title;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+
+    @media (min-width: $desktop-width) {
+        order: 3;
+        font-family: $basic-font-title-semibold;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.picture-popup__title {
+    margin: 0;
+    font-family: $basic-font-text;
+    font-size: 16px;
+    line-height: 20px;
+
+    @media (min-width: $desktop-width) {
+        font-size: 20px;
+        line-height: 24px;
+        order: 1;
+    }
+}
+
+.picture-popup__desc {
+    display: none;
+    margin: 0;
+    font-family: $basic-font-text;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 18px;
+
+    @media (min-width: $desktop-width) {
+        display: block;
+        order: 2;
+
+        font-size: 16px;
+        line-height: 24px;
+    }
+}
+
+.picture-popup__control {
+    cursor: pointer;
+    position: absolute;
+    bottom: 100px;
+    padding: 0;
+    border: none;
+    width: 32px;
+    height: 32px;
+    background-color: $gluon-grey-05;
+    background-image: url(../img/icons/icon-arrow.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 13px 13px;
+    border-radius: 50px;
+
+    display: block;
+    z-index: 5;
+
+    &--prev {
+        left: 60px;
+
+        @media (min-width: $desktop-width) {
+            bottom: 250px;
+        }
+    }
+
+    &--next {
+        transform: rotate(180deg);
+        right: 60px;
+
+        @media (min-width: $desktop-width) {
+            bottom: 250px;
+        }
+    }
+}

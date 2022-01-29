@@ -342,24 +342,7 @@
                     <button class="carousel__control carousel__control--next slide--next"> </button>
                 </div>
 
-                <div class="portfolio__popup picture-popup overlay---active">
-                    <div class="picture-popup__wrapper">
-                        <div class="picture-popup__nav">
-                            <button class="picture-popup__button-close"></button>
-                            <p class="picture-popup__counter"> 4 / 7</p>
-                        </div>
-                        <button class="picture-popup__control picture-popup__control--prev slide--prev"> </button>
-                        <div class="picture-popup__image-wrapper">
-                            <img id='myImage' src="./img/slide-4x4.png" alt="" class="picture-popup__image" width="375">
-                        </div>
-                        <button class="picture-popup__control picture-popup__control--next slide--next"> </button>
-                        <div class="picture-popup__info">
-                            <p class="picture-popup__price">500 P</p>
-                            <p class="picture-popup__title">Наклейки детские</p>
-                            <p class="picture-popup__desc">Наклейки детские</p>
-                        </div>
-                    </div>
-                </div>
+
             </section>
         </section>
     </section>
@@ -571,7 +554,7 @@
             <a href="tel:+1234567890" class="candidate-options__call disabled" aria-label="Позвонить"></a>
         </div>
     </div>
-    <div class="popup overlay"> </div>
+    <div class="popup overlay overlay--active"> </div>
     <div class="popup__addnote popup-addnote">
         <h2 class="popup-addnote__title">Ваша заметка о кандидате</h2>
         <textarea placeholder="Введите текст" class="popup-addnote__input"></textarea>
@@ -579,6 +562,25 @@
             <button class="basic-button popup-addnote__button popup-addnote__button--cancel">Отмена</button>
             <button class="basic-button popup-addnote__button popup-addnote__button--save">Сохранить</button>
         </div>
+    </div>
+
+    <div class="portfolio__popup picture-popup picture-popup--active">
+
+        <div class="picture-popup__nav">
+            <button class="picture-popup__button-close"></button>
+            <p class="picture-popup__counter"> 4 / 7</p>
+        </div>
+        <button class="picture-popup__control picture-popup__control--prev slide--prev"> </button>
+        <div class="picture-popup__image-wrapper">
+            <img id='myImage' src="./img/slide-4x4.png" alt="" class="picture-popup__image" width="375">
+        </div>
+        <button class="picture-popup__control picture-popup__control--next slide--next"> </button>
+        <div class="picture-popup__info">
+            <p class="picture-popup__price">500 P</p>
+            <p class="picture-popup__title">Наклейки детские</p>
+            <p class="picture-popup__desc">Наклейки детские</p>
+        </div>
+
     </div>
 
 </main>
