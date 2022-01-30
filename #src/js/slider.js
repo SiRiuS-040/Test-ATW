@@ -7,6 +7,10 @@ const imageArray = document.querySelectorAll('.gallery__image');
 const imageWrapper = document.querySelector('.picture-popup__image-wrapper');
 const list = carousel.querySelector('.gallery__list');
 const listElems = carousel.querySelectorAll('.gallery__item');
+const carouselPrev = document.querySelector('.carousel__control--prev');
+const carouselNext = document.querySelector('.carousel__control--next');
+const popupImagePrev = document.querySelector('.picture-popup__control--prev');
+const popupImageNext = document.querySelector('.picture-popup__control--next');
 
 const width = 157;
 const count = 1;
@@ -15,17 +19,18 @@ const isEscapeKey = (evt) => evt.key === 'Escape';
 
 // Карусель
 let position = 0;
-carousel.querySelector('.carousel__control--prev').onclick = function () {
+
+carouselPrev.addEventListener('click', () => {
     position += width * count;
     position = Math.min(position, 0)
     list.style.marginLeft = position + 'px';
-};
+});
 
-carousel.querySelector('.carousel__control--next').onclick = function () {
+carouselNext.addEventListener('click', () => {
     position -= width * count;
     position = Math.max(position, -width * (listElems.length - count));
     list.style.marginLeft = position + 'px';
-};
+});
 
 // Окно просмотра изображения
 // Ловим и устанавливаем новый путь
@@ -63,9 +68,55 @@ const showPopupSlide = () => {
     }, { once: true });
 };
 
+// навигация
+
+function targetTest(evt) {
+    console.log(evt.target);
+
+}
+let imageIndex = 0;
+
+const getimageItemIndex = (event) => {
+    let child = event.target.parentNode.parentNode;
+    let parent = event.target.parentNode.parentNode.parentNode;
+    let index = Array.prototype.indexOf.call(parent.children, child);
+    return imageIndex = index;
+};
+
+
+function setImagePrev() {
+    if (imageIndex == 0) {
+        imageIndex = imageArray.length;
+    }
+    imageWrapper.style.backgroundImage = (" url('." + imageArray[imageIndex - 1].getAttribute("src") + " '");
+    imageIndex--;
+}
+
+function setImageNext() {
+    if (imageIndex >= imageArray.length - 1) {
+        imageIndex = -1;
+    }
+    imageWrapper.style.backgroundImage = (" url('." + imageArray[imageIndex + 1].getAttribute("src") + " '");
+    imageIndex++;
+}
+
+// ИТОГ
+
 popupSliderOpenArr.forEach(item => {
     item.addEventListener('click', event => {
+        getimageItemIndex(event)
         list.addEventListener('click', setImageUrl, false);
         showPopupSlide();
     })
 })
+
+popupImagePrev.addEventListener('click', () => {
+    setImagePrev();
+    console.log(imageIndex);
+});
+
+popupImageNext.addEventListener('click', () => {
+
+    setImageNext();
+    console.log(imageIndex);
+});
