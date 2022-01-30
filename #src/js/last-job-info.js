@@ -1,9 +1,7 @@
 const buttonToggleDuties = document.querySelector('.button-hider--duties');
 const buttonToggleAchievements = document.querySelector('.button-hider--achievements');
 const buttonToggleReasonss = document.querySelector('.button-hider--reasons');
-
 const buttonToggle = document.querySelector('.button-hider');
-
 const listDuties = document.querySelector('.duties');
 const listAchievements = document.querySelector('.achievements');
 const listReasons = document.querySelector('.reasons');
@@ -12,11 +10,8 @@ buttonToggleDuties.textContent = ('Скрыть');
 buttonToggleAchievements.textContent = ('Показать полность...');
 buttonToggleReasonss.textContent = ('Показать полность...');
 
-
-
 const toggleInfoD = function () {
     listDuties.classList.toggle('last-job__info-list--minimized');
-
     if (buttonToggleDuties.textContent == 'Показать полность...') {
         buttonToggleDuties.textContent = 'Скрыть';
         listDuties.classList.remove('last-job__info-list--minimized');
@@ -26,10 +21,8 @@ const toggleInfoD = function () {
     }
 };
 
-
 const toggleInfoA = function () {
     listAchievements.classList.toggle('last-job__info-list--minimized');
-
     if (buttonToggleAchievements.textContent == 'Показать полность...') {
         buttonToggleAchievements.textContent = 'Скрыть';
         listAchievements.classList.remove('last-job__info-list--minimized');
@@ -39,10 +32,8 @@ const toggleInfoA = function () {
     }
 };
 
-
 const toggleInfoR = function () {
     listReasons.classList.toggle('last-job__info-list--minimized');
-
     if (buttonToggleReasonss.textContent == 'Показать полность...') {
         buttonToggleReasonss.textContent = 'Скрыть';
         listReasons.classList.remove('last-job__info-list--minimized');
@@ -52,17 +43,14 @@ const toggleInfoR = function () {
     }
 };
 
-
-buttonToggleDuties.onclick = function () {
+buttonToggleDuties.addEventListener('click', () => {
     toggleInfoD();
-};
+});
 
-buttonToggleAchievements.onclick = function () {
+buttonToggleAchievements.addEventListener('click', () => {
     toggleInfoA();
-};
+});
 
-buttonToggleReasonss.onclick = function () {
+buttonToggleReasonss.addEventListener('click', () => {
     toggleInfoR();
-};
-
-
+});

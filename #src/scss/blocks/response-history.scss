@@ -9,7 +9,6 @@
         width: 290px;
         border-radius: 10px;
         border: 1px solid $clear-vision;
-
         z-index: 1;
     }
 }
@@ -23,7 +22,6 @@
     font-size: 16px;
     line-height: 20px;
     color: $nocturnal;
-
     border-bottom: 1px solid $clear-vision;
 
     @media (min-width: $desktop-width) {
@@ -43,7 +41,6 @@
         justify-content: center;
         align-items: center;
         position: absolute;
-
         top: 8px;
         right: 10px;
     }
@@ -51,13 +48,12 @@
 
 .response-history__icon {
     transition: 0.6s ease-in-out;
-    
+
     @media (min-width: $desktop-width) {
         transform: rotate(90deg);
 
         &--closed {
             transform: rotate(-90deg);
-
             transition: 0.6s ease-in-out;
         }
     }
@@ -90,7 +86,6 @@
             transform: perspective(600px) rotateX(-90deg);
             transform-origin: 0% 0%;
             transition: 0.6s ease-in-out;
-
             visibility: hidden;
             height: 0;
             overflow: hidden;
@@ -107,7 +102,6 @@
 
 .response__link {
     cursor: pointer;
-
     text-decoration: none;
     display: flex;
     justify-content: flex-start;
@@ -119,13 +113,10 @@
 }
 .response__date {
     margin: 0;
-
     width: 62px;
-
     display: flex;
     flex-direction: column;
     align-items: left;
-
     font-family: $basic-font-title;
     font-weight: 500;
     font-size: 13px;
@@ -143,10 +134,8 @@
         position: absolute;
         width: 3px;
         height: 100%;
-
         top: 0;
         right: 0px;
-
         background-color: $black;
         border-radius: 50px;
     }
@@ -181,16 +170,13 @@
 .response__type {
     margin: 0;
     padding: 13px 0 15px 10px;
-
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
-
     font-family: $basic-font-text;
     font-weight: 400;
     font-size: 13px;
     line-height: 14px;
-
     color: $nocturnal;
 
     @media (min-width: $desktop-width) {

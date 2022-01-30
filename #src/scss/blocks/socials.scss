@@ -1,8 +1,8 @@
-.socials {
+.social {
     display: none;
+
     @media (min-width: $desktop-width) {
         display: block;
-
         position: absolute;
         top: 622px;
         left: calc(50% + 240px);

@@ -29,7 +29,6 @@
         position: absolute;
         top: 123px;
         left: calc(50% + 238px);
-
         font-family: $basic-font-title;
         font-weight: 500;
         font-size: 28px;
@@ -46,7 +45,6 @@
 
     @media (min-width: $desktop-width) {
         margin: 8px 0 6px 0;
-
         font-family: $basic-font-title;
         font-weight: 500;
         font-size: 16px;

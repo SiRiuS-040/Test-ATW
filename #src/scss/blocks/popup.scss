@@ -4,12 +4,10 @@
     right: 0;
     left: 0;
     bottom: 0;
-
     background: $black-07;
     transition: opacity 500ms;
     visibility: hidden;
     opacity: 0;
-
     z-index: 5;
 
     @media (min-width: $desktop-width) {
@@ -56,7 +54,6 @@
         right: calc(50% - 18px);
         width: 36px;
         height: 5px;
-
         background-color: $white;
         border-radius: 3px;
 
@@ -94,7 +91,6 @@
     border: none;
     height: 122px;
     resize: none;
-
     font-family: $basic-font-text;
     font-weight: 400;
     font-size: 15px;
@@ -131,8 +127,6 @@
     }
 }
 
-// Окно изображения
-
 .picture-popup {
     color: $white;
     position: fixed;
@@ -140,14 +134,11 @@
     left: 0;
     right: 0;
     z-index: 10;
-
     visibility: hidden;
     opacity: 0;
-
     width: auto;
     height: 667px;
     background-color: $gluon-grey-075;
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,16 +157,12 @@
     @media (min-width: $desktop-width) {
         left: calc(50% - 666px / 2);
         top: 200px;
-
         width: 666px;
         height: 453px;
-
         color: $black-howl;
-
         background-color: $white;
         box-shadow: 1px 4px 40px $matisse;
         border-radius: 16px;
-
         border: 2px solid $white;
     }
 }
@@ -197,7 +184,6 @@
     cursor: pointer;
     background-color: transparent;
     position: relative;
-
     background-image: url(../img/icons/icon-close.svg);
     background-size: 20px 20px;
     background-repeat: no-repeat;
@@ -208,10 +194,8 @@
         padding: 0;
         width: 24px;
         height: 24px;
-
         background-image: url(../img/icons/icon-close-black.svg);
         background-size: 18px 18px;
-
         position: absolute;
         top: 0;
         right: -36px;
@@ -220,7 +204,6 @@
 
 .picture-popup__counter {
     margin: 0;
-
     margin-left: calc(50% - 119px / 2);
     margin-right: auto;
     font-family: $basic-font-title-semibold;
@@ -240,7 +223,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-image: url(../img/slide-5x4.png);
     background-size: cover;
     background-position: center;
@@ -248,7 +230,6 @@
     @media (min-width: $desktop-width) {
         // width: inherit;
         object-fit: contain;
-
         border-top-left-radius: 16px;
         border-top-right-radius: 16px;
     }
@@ -335,7 +316,6 @@
     background-repeat: no-repeat;
     background-size: 13px 13px;
     border-radius: 50px;
-
     display: block;
     z-index: 5;
 

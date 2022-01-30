@@ -1,13 +1,11 @@
 .hero {
     height: 48px;
-
     min-height: 48px;
     display: flex;
     justify-content: flex-end;
     align-items: center;
     position: relative;
     padding-right: 5px;
-
     background-color: $white;
     z-index: 2;
 
@@ -26,7 +24,6 @@
     position: sticky;
     top: 0;
     background-color: $white;
-
     margin-top: -48px;
     padding-right: 5px;
     border-bottom: 1px solid $maui-mist;
@@ -40,7 +37,6 @@
 .hero__privious-candidate {
     margin-left: 0;
     margin-right: 0;
-
     width: 32px;
     height: 32px;
     cursor: pointer;
@@ -54,11 +50,9 @@
         content: "";
         position: absolute;
         top: calc(50% - 16px);
-
         right: 0px;
         width: 32px;
         height: 32px;
-
         background-image: url(../img/icons/icon-arrow.svg);
         background-size: 20px 20px;
         background-position: center;
@@ -93,7 +87,7 @@
     font-size: 14px;
     line-height: 20px;
 }
-.header__candidate-position {
+.hero__candidate-position {
     margin: 0;
     font-size: 13px;
     line-height: 18px;
@@ -117,7 +111,6 @@
         right: 0px;
         width: 24px;
         height: 24px;
-
         background-image: url(../img/icons/icon-note.svg);
         background-size: 24px 24px;
         background-repeat: no-repeat;
@@ -162,7 +155,6 @@
         right: 0;
         width: 24px;
         height: 24px;
-
         background-image: url(../img/icons/icon-print.svg);
         background-size: 24px 24px;
         background-repeat: no-repeat;
@@ -173,13 +165,11 @@
     }
 }
 
-.hero--bottom {
+.hero-bottom {
     position: sticky;
-
     bottom: 0;
     height: 58px;
     width: 100%;
-
     background-color: $white;
 
     @media (min-width: $desktop-width) {
@@ -187,6 +177,6 @@
     }
 }
 
-.hero--bottom__wrapper {
+.hero-bottom__wrapper {
     padding: 8px;
 }

@@ -1,7 +1,6 @@
 .video-interview {
     margin-top: 24px;
     min-height: 40px;
-
     box-shadow: inset 0px -1px 0px $maui-mist;
     border-radius: 4px;
 
@@ -9,7 +8,6 @@
         margin-top: 16px;
         padding: 10px 0;
         box-shadow: none;
-
         border: 1px solid #e7eef6;
         box-sizing: border-box;
         border-radius: 8px;
@@ -18,7 +16,6 @@
 
 .video-interview__wrapper {
     padding-left: 72px;
-
     width: 100%;
     position: relative;
 
@@ -29,7 +26,6 @@
         left: 8px;
         width: 47px;
         height: 44px;
-
         background-image: url(../img/icons/icon-video-interview.svg);
         background-size: 47px 44px;
         background-repeat: no-repeat;
@@ -49,7 +45,6 @@
 }
 .video-interview__desc {
     margin: 4px 0 10px 0;
-
     font-size: 12px;
     line-height: 14px;
     color: $pharaon-purple;
@@ -62,7 +57,6 @@
     text-decoration: none;
     display: block;
     padding-right: 54px;
-
     cursor: pointer;
 
     @media (min-width: $desktop-width) {
@@ -73,11 +67,9 @@
         content: "";
         position: absolute;
         top: 4px;
-
         right: calc(0%);
         width: 42px;
         height: 42px;
-
         background-color: $maui-mist;
         border-radius: 7px;
         background-image: url(../img/icons/icon-arrow.svg);
