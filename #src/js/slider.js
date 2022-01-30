@@ -112,11 +112,8 @@ popupSliderOpenArr.forEach(item => {
 
 popupImagePrev.addEventListener('click', () => {
     setImagePrev();
-    console.log(imageIndex);
 });
 
 popupImageNext.addEventListener('click', () => {
-
     setImageNext();
-    console.log(imageIndex);
 });
