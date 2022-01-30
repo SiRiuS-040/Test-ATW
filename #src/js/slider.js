@@ -12,6 +12,8 @@ const carouselNext = document.querySelector('.carousel__control--next');
 const popupImagePrev = document.querySelector('.picture-popup__control--prev');
 const popupImageNext = document.querySelector('.picture-popup__control--next');
 
+const imageCounter = document.querySelector('.picture-popup__counter');
+
 const width = 157;
 const count = 1;
 
@@ -100,11 +102,17 @@ function setImageNext() {
     imageIndex++;
 }
 
+
+function setImageCounter() {
+    imageCounter.textContent = ((imageIndex + 1) + "  /  " + imageArray.length);
+}
+
 // ИТОГ
 
 popupSliderOpenArr.forEach(item => {
     item.addEventListener('click', event => {
         getimageItemIndex(event)
+        setImageCounter();
         list.addEventListener('click', setImageUrl, false);
         showPopupSlide();
     })
@@ -112,8 +120,10 @@ popupSliderOpenArr.forEach(item => {
 
 popupImagePrev.addEventListener('click', () => {
     setImagePrev();
+    setImageCounter();
 });
 
 popupImageNext.addEventListener('click', () => {
     setImageNext();
+    setImageCounter();
 });

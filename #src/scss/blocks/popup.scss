@@ -34,8 +34,8 @@
     display: flex;
     flex-direction: column;
     background-color: $white;
-
     z-index: 10;
+    transition: opacity 500ms;
 
     @media (min-width: $tablet-width) {
         width: 442px;
@@ -142,6 +142,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    transition: opacity 500ms;
 
     &--active {
         visibility: visible;
@@ -318,6 +319,20 @@
     border-radius: 50px;
     display: block;
     z-index: 5;
+
+    &:hover {
+        box-shadow: 0px 0px 17px 10px $gluon-grey-075;
+    }
+
+    &:target {
+        border: 2px solid $maui-mist;
+        box-shadow: 0px 0px 17px 10px $gluon-grey-075;
+    }
+
+    &:focus {
+        border: 2px solid $maui-mist;
+        box-shadow: 0px 0px 17px 10px $gluon-grey-075;
+    }
 
     &--prev {
         left: 60px;
