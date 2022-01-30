@@ -165,7 +165,7 @@
 
     @media (min-width: $desktop-width) {
         left: calc(50% - 666px / 2);
-        top: 300px;
+        top: 200px;
 
         width: 666px;
         height: 453px;
@@ -240,6 +240,10 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    background-image: url(../img/slide-5x4.png);
+    background-size: cover;
+    background-position: center;
 
     @media (min-width: $desktop-width) {
         // width: inherit;

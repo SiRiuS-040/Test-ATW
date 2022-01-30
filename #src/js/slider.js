@@ -1,10 +1,27 @@
-// Карусель
+
+
+
+
+const popupSlider = document.querySelector('.picture-popup');
+const popupSliderClose = document.querySelector('.picture-popup__button-close');
+
+const popupSliderOpen = document.querySelector('.gallery__image');
+const popupSliderOpenArr = document.querySelectorAll('.gallery__image');
+const overlay = document.querySelector('.overlay');
+
+const imageArray = document.querySelectorAll('.gallery__image');
+const imageWrapper = document.querySelector('.picture-popup__image-wrapper');
+
+const isEscapeKey = (evt) => evt.key === 'Escape';
 
 const width = 157; // ширина картинки
 const count = 1; // видимое количество изображений
 
 const list = carousel.querySelector('.gallery__list');
 const listElems = carousel.querySelectorAll('.gallery__item');
+
+
+// Карусель
 
 let position = 0; // положение ленты прокрутки
 
@@ -26,13 +43,37 @@ carousel.querySelector('.slide--next').onclick = function () {
 
 
 // Окно просмотра изображения
+// ловим и устанавливаем новый путь
+
+function setImageUrl(evt) {
+
+    if (evt.target != list) {
+        let newPath = evt.target.getAttribute("src");
+        imageWrapper.style.backgroundImage = (" url('." + newPath + " '");
+    }
+}
+
+// навигация
+
+const popupImagePrev = document.querySelector('.picture-popup__control--prev');
+const popupImageNext = document.querySelector('.picture-popup__control--next');
+
+function targetTest(evt) {
+    console.log(evt.target);
+
+}
+
+// popupSliderOpenArr.forEach(item => {
 
 
-const popupSlider = document.querySelector('.picture-popup');
-const popupSliderClose = document.querySelector('.picture-popup__button-close');
-const popupSliderOpen = document.querySelectorAll('.gallery__image');
-const overlay = document.querySelector('.overlay');
-const isEscapeKey = (evt) => evt.key === 'Escape';
+//     list.addEventListener('click', setImageUrl, false);
+
+// })
+
+
+popupImageNext.addEventListener('click', targetTest, false);
+
+// Открытие всплывающего окна
 
 const showPopupSlide = () => {
 
@@ -64,10 +105,10 @@ const showPopupSlide = () => {
     }, { once: true });
 };
 
-popupSliderOpen.forEach(item => {
+
+popupSliderOpenArr.forEach(item => {
     item.addEventListener('click', event => {
+        list.addEventListener('click', setImageUrl, false);
         showPopupSlide();
     })
 })
-
-
