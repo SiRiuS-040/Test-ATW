@@ -19,7 +19,6 @@ const count = 1;
 
 const isEscapeKey = (evt) => evt.key === 'Escape';
 
-// Карусель
 let position = 0;
 
 carouselPrev.addEventListener('click', () => {
@@ -34,17 +33,12 @@ carouselNext.addEventListener('click', () => {
     list.style.marginLeft = position + 'px';
 });
 
-// Окно просмотра изображения
-// Ловим и устанавливаем новый путь
-
 function setImageUrl(evt) {
     if (evt.target != list) {
         let newPath = evt.target.getAttribute("src");
         imageWrapper.style.backgroundImage = (" url('." + newPath + " '");
     }
 }
-
-// Открытие всплывающего окна
 
 const showPopupSlide = () => {
     overlay.classList.add('overlay--active');
@@ -70,12 +64,6 @@ const showPopupSlide = () => {
     }, { once: true });
 };
 
-// навигация
-
-function targetTest(evt) {
-    console.log(evt.target);
-
-}
 let imageIndex = 0;
 
 const getimageItemIndex = (event) => {
@@ -84,7 +72,6 @@ const getimageItemIndex = (event) => {
     let index = Array.prototype.indexOf.call(parent.children, child);
     return imageIndex = index;
 };
-
 
 function setImagePrev() {
     if (imageIndex == 0) {
@@ -102,12 +89,9 @@ function setImageNext() {
     imageIndex++;
 }
 
-
 function setImageCounter() {
     imageCounter.textContent = ((imageIndex + 1) + "  /  " + imageArray.length);
 }
-
-// ИТОГ
 
 popupSliderOpenArr.forEach(item => {
     item.addEventListener('click', event => {
