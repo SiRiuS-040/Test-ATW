@@ -36,7 +36,7 @@ carouselNext.addEventListener('click', () => {
 function setImageUrl(evt) {
     if (evt.target != list) {
         let newPath = evt.target.getAttribute("src");
-        imageWrapper.style.backgroundImage = (" url('." + newPath + "'");
+        imageWrapper.style.backgroundImage = (" url('" + newPath + "'");
     }
 }
 
@@ -77,7 +77,7 @@ function setImagePrev() {
     if (imageIndex == 0) {
         imageIndex = imageArray.length;
     }
-    imageWrapper.style.backgroundImage = (" url('." + imageArray[imageIndex - 1].getAttribute("src") + "'");
+    imageWrapper.style.backgroundImage = ("url('" + imageArray[imageIndex - 1].getAttribute("src") + "'");
     imageIndex--;
 }
 
@@ -85,7 +85,7 @@ function setImageNext() {
     if (imageIndex >= imageArray.length - 1) {
         imageIndex = -1;
     }
-    imageWrapper.style.backgroundImage = (" url('." + imageArray[imageIndex + 1].getAttribute("src") + "'");
+    imageWrapper.style.backgroundImage = ("url('" + imageArray[imageIndex + 1].getAttribute("src") + "'");
     imageIndex++;
 }
 
